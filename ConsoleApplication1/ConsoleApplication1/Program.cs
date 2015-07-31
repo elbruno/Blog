@@ -13,11 +13,20 @@ namespace ConsoleApplication1
             Console.WriteLine(nameof(p.Address)); // Address
             Console.WriteLine(nameof(p.Email));   // EMail
             Console.WriteLine(nameof(address));   // address
+
+            var testVar = "Hola";
+            TraceName(testVar);
+
             Console.WriteLine("");
             Console.WriteLine("Members");
             Console.WriteLine(nameof(p.GetCompleteName)); // GetCompleteName
             Console.WriteLine(nameof(string.GetType));    // GetType
             Console.ReadLine();
+        }
+
+        static void TraceName(string varToWork)
+        {
+            Console.WriteLine(nameof(varToWork));
         }
     }
 

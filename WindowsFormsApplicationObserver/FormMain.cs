@@ -1,48 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Reactive.Subjects;
-using System.Threading;
 using System.Windows.Forms;
+using SimpleBroker;
 
 namespace WindowsFormsApplicationObserver
 {
-    public partial class FormMain : Form, IObserver<Message>
+    public partial class FormMain : Form
     {
-
         public FormMain()
         {
             InitializeComponent();
-        }
-       
-
-        private void btnOpenMessageDispatcher_Click(object sender, System.EventArgs e)
-        {
-            var formSendData = new FormSendData();
-            formSendData.Show(this);
+            Load += FormMain_Load;
+            Closed += FormMain_Closed;
         }
 
-        public void OnNext(Message value)
-        {
-            txtLog.Text = $"{value.Source}, {value.Information}{Environment.NewLine}{txtLog.Text}";
-        }
+        private void FormMain_Closed(object sender, EventArgs e) => this.Unsubscribe<Message>();
 
-        public void OnError(Exception error)
-        {
-            throw new NotImplementedException();
-        }
+        private void FormMain_Load(object sender, EventArgs e) => this.Subscribe<Message>(OnNext);
 
-        public void OnCompleted()
-        {
-            throw new NotImplementedException();
-        }
+        private void btnOpenMessageDispatcher_Click(object sender, EventArgs e) => new FormSendData().Show(this);
 
-        private void FormMain_Load(object sender, EventArgs e)
-        {
-        }
+        public void OnNext(Message value) => txtLog.Text = $"{value.Source}, {value.Information}{Environment.NewLine}{txtLog.Text}";
 
-        private void NewAction(Message value)
-        {
-            txtLog.Text = $"{value.Source}, {value.Information}{Environment.NewLine}{txtLog.Text}";
-        }
     }
 }

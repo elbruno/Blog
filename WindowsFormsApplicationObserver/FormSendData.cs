@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using SimpleBroker;
 
 namespace WindowsFormsApplicationObserver
 {
@@ -17,6 +18,7 @@ namespace WindowsFormsApplicationObserver
                 Source = txtSource.Text,
                 Information = txtInformation.Text
             };
+            message.Publish();
         }
     }
 }

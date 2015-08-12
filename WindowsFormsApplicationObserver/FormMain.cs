@@ -20,6 +20,5 @@ namespace WindowsFormsApplicationObserver
         private void btnOpenMessageDispatcher_Click(object sender, EventArgs e) => new FormSendData().Show(this);
 
         public void OnNext(Message value) => txtLog.Text = $"{value.Source}, {value.Information}{Environment.NewLine}{txtLog.Text}";
-
     }
 }

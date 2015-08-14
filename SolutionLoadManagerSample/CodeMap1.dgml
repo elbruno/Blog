@@ -8,7 +8,7 @@
     <Node Id="@14" Category="CodeSchema_Assembly" CodeSchemaProperty_IsExternal="True" CodeSchemaProperty_StrongName="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(FxReferenceAssemblies)\.NETFramework\v4.6\mscorlib.dll" Group="Collapsed" Label="mscorlib.dll" UseManualLocation="True">
       <Category Ref="FileSystem.Category.FileOfType.dll" />
     </Node>
-    <Node Id="@16" Category="CodeSchema_Assembly" Bounds="116.99,76,134.15,25" CodeSchemaProperty_StrongName="SlmSample, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(ced4ccf2-9874-422c-aca9-d3de738be27c.OutputPath)" Group="Collapsed" Label="SlmSample.dll" />
+    <Node Id="@16" Category="CodeSchema_Assembly" Bounds="53.99,-80,134.15,25" CodeSchemaProperty_StrongName="SlmSample, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(ced4ccf2-9874-422c-aca9-d3de738be27c.OutputPath)" Group="Collapsed" Label="SlmSample.dll" UseManualLocation="True" />
     <Node Id="@18" Category="CodeSchema_Assembly" CodeSchemaProperty_IsExternal="True" CodeSchemaProperty_StrongName="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" DelayedChildNodesState="NotFetched" FilePath="$(FxReferenceAssemblies)\.NETFramework\v4.6\System.Core.dll" Group="Collapsed" Label="System.Core.dll" UseManualLocation="True">
       <Category Ref="FileSystem.Category.FileOfType.dll" />
     </Node>
@@ -31,7 +31,7 @@
     <Node Id="@30" Category="CodeSchema_Assembly" CodeSchemaProperty_IsExternal="True" CodeSchemaProperty_StrongName="System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" DelayedChildNodesState="NotFetched" FilePath="$(FxReferenceAssemblies)\.NETFramework\v4.6\System.Data.DataSetExtensions.dll" Group="Collapsed" Label="System.Data.DataSetExtensions.dll" UseManualLocation="True">
       <Category Ref="FileSystem.Category.FileOfType.dll" />
     </Node>
-    <Node Id="@4" Category="CodeSchema_Assembly" Bounds="108.249311399473,-76.8384191135721,145.6,25" CodeSchemaProperty_StrongName="SlmSample_1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(60fde005-11e0-4f25-8f6a-881e7f1ef842.OutputPath)" Group="Collapsed" Label="SlmSample_1.dll" UseManualLocation="True" />
+    <Node Id="@4" Category="CodeSchema_Assembly" Bounds="110.249311399473,71.7286812952566,145.6,25" CodeSchemaProperty_StrongName="SlmSample_1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(60fde005-11e0-4f25-8f6a-881e7f1ef842.OutputPath)" Group="Collapsed" Label="SlmSample_1.dll" UseManualLocation="True" />
     <Node Id="@6" Category="CodeSchema_Assembly" Bounds="456.74,128.961818899234,157.05,25" CodeSchemaProperty_StrongName="SlmSample_2_2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(5f524db5-e60b-41ba-8877-e90540a257c0.OutputPath)" Group="Collapsed" Label="SlmSample_2_2.dll" />
     <Node Id="@8" Category="CodeSchema_Assembly" Bounds="326.822499020465,73.9617188992342,145.6,25" CodeSchemaProperty_StrongName="SlmSample_2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(27e25c3c-57f4-4d17-89c8-55030827f747.OutputPath)" Group="Collapsed" Label="SlmSample_2.dll" UseManualLocation="True" />
     <Node Id="_standardGraphExternalsGroup" Category="Externals" Bounds="-122.288535839397,86.9680391698179,86.99,25" Group="Collapsed" Label="Externals" LayoutSettings="List" UseManualLocation="True" />
@@ -76,7 +76,7 @@
     <Link Source="@4" Target="@14" Category="CodeSchema_AttributeUse" IsTargetVirtualized="True" Weight="14">
       <Category Ref="CodeMap_ExternalReference" />
     </Link>
-    <Link Source="@4" Target="@16" Category="CodeMap_ProjectReference" Bounds="181.295951659986,-51.8384191135721,2.34486164985188,118.840170547028" />
+    <Link Source="@4" Target="@16" Category="CodeMap_ProjectReference" Bounds="129.575134846353,-46.6684136077554,48.3676674483207,118.397094903012" />
     <Link Source="@4" Target="@18" Category="CodeMap_ExternalReference" />
     <Link Source="@4" Target="@20" Category="CodeMap_ExternalReference" />
     <Link Source="@4" Target="@22" Category="CodeMap_ExternalReference" />
@@ -100,7 +100,7 @@
     <Link Source="@8" Target="@14" Category="CodeSchema_AttributeUse" IsTargetVirtualized="True" Weight="14">
       <Category Ref="CodeMap_ExternalReference" />
     </Link>
-    <Link Source="@8" Target="@16" Category="CodeMap_ProjectReference" Bounds="260.139597667353,87.1501053613617,66.6829013531113,0.630544045973451" />
+    <Link Source="@8" Target="@16" Category="CodeMap_ProjectReference" Bounds="151.557718276193,-50.6463473924717,225.448972330008,124.608066291706" />
     <Link Source="@8" Target="@18" Category="CodeMap_ExternalReference" />
     <Link Source="@8" Target="@20" Category="CodeMap_ExternalReference" />
     <Link Source="@8" Target="@22" Category="CodeMap_ExternalReference" />

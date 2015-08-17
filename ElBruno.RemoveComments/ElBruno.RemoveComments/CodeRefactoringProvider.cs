@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using System.Composition;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -8,9 +6,6 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CodeRefactorings;
 using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.CodeAnalysis.Rename;
-using Microsoft.CodeAnalysis.Text;
 
 namespace ElBruno.RemoveComments
 {
@@ -20,23 +15,14 @@ namespace ElBruno.RemoveComments
         public sealed override async Task ComputeRefactoringsAsync(CodeRefactoringContext context)
         {
             var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-            var found = false;
             var commentTrivia = root.DescendantTrivia();
-            foreach (var comment in commentTrivia)
-            {
-                if (comment.IsKind(SyntaxKind.SingleLineCommentTrivia) ||
-                    comment.IsKind(SyntaxKind.MultiLineCommentTrivia))
-                {
-                    found = true;
-                    break;
-                }
-            }
-
+            var found = commentTrivia.Any(comment => comment.IsKind(SyntaxKind.SingleLineCommentTrivia) || comment.IsKind(SyntaxKind.MultiLineCommentTrivia));
             if (!found)
             {
                 return;
             }
-            var action = CodeAction.Create("Remove comments", c => RemoveAllComments(context, c));
+            var action = CodeAction.Create("Remove comments", c => 
+                RemoveAllComments(context, c));
             context.RegisterRefactoring(action);
         }
 

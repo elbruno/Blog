@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23103.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{CBC66964-F59A-4A39-9F66-EB0BEB16752C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication2", "ConsoleApplication2\ConsoleApplication2.csproj", "{EA7F9CD2-ECD4-49E8-8502-187EBA971F5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplicationStringFormatParams", "ConsoleApplicationStringFormatParams\ConsoleApplicationStringFormatParams.csproj", "{F31156B6-944C-4B80-AC66-09A42213321A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{EA7F9CD2-ECD4-49E8-8502-187EBA971F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA7F9CD2-ECD4-49E8-8502-187EBA971F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA7F9CD2-ECD4-49E8-8502-187EBA971F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F31156B6-944C-4B80-AC66-09A42213321A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31156B6-944C-4B80-AC66-09A42213321A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31156B6-944C-4B80-AC66-09A42213321A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31156B6-944C-4B80-AC66-09A42213321A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

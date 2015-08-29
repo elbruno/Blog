@@ -4,11 +4,14 @@
                  xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
     <Identity Id="ElBruno.RemoveComments.Vsix..c5b6678e-c0ec-4e4e-9b02-7777840f2750"
-              Version="1.0"
+              Version="1.0.0.0"
               Language="en-US"
-              Publisher="Bruno"/>
-    <DisplayName>El Bruno - Remove Comments Sample</DisplayName>
-    <Description xml:space="preserve">This is a sample code refactoring extension for the .NET Compiler Platform ("Roslyn") which removes all the comments in a C# source code file</Description>
+              Publisher="Bruno Capuano"/>
+    <DisplayName>El Bruno - Remove Comments with Roslyn sample</DisplayName>
+    <Description xml:space="preserve">This is a sample code refactoring extension for the .NET Compiler Platform ("Roslyn") which removes all the comments in a C# source code file. You can get more information and the access to the source code in my blog at http://elbruno.com</Description>
+    <MoreInfo>http://elbruno.com/</MoreInfo>
+    <License>License.txt</License>
+    <GettingStartedGuide>http://elbruno.com/2015/08/17/vs2015-delete-all-comments-in-a-file-with-roslyn/</GettingStartedGuide>
     <Icon>Message-Delete 256.png</Icon>
     <Tags>Roslyn </Tags>
   </Metadata>

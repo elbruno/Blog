@@ -13,6 +13,7 @@
     <License>License.txt</License>
     <GettingStartedGuide>http://elbruno.com/2015/08/17/vs2015-delete-all-comments-in-a-file-with-roslyn/</GettingStartedGuide>
     <Icon>Message-Delete 256.png</Icon>
+    <PreviewImage>Preview.png</PreviewImage>
     <Tags>Roslyn </Tags>
   </Metadata>
   <Installation>

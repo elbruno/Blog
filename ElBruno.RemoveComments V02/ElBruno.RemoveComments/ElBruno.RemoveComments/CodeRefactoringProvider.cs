@@ -21,7 +21,7 @@ namespace ElBruno.RemoveComments
             {
                 return;
             }
-            var action = CodeAction.Create("Remove comments", c => 
+            var action = CodeAction.Create("El Bruno - Remove comments", c => 
                 RemoveAllComments(context, c));
             context.RegisterRefactoring(action);
         }

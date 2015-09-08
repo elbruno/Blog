@@ -38,13 +38,14 @@ namespace AndroidApp4
 
         private void _bleAdapter_ScanTimeoutElapsed(object sender, EventArgs e)
         {
-            _bleAdapter.StopScanningForDevices(); 
+            _bleAdapter.StopScanningForDevices();
             DisplayInformation("Bluetooth scan timeout elapsed, no heart rate monitors were found");
         }
 
         private void _bleAdapter_DeviceDiscovered(object sender, DeviceDiscoveredEventArgs e)
         {
-            var msg = string.Format("Device found: {0}", e.Device.Name);
+            var msg = string.Format(@"Device found: {0}
+  {1} - {2}", e.Device.Name, e.Device.ID, e.Device.Rssi);
             DisplayInformation(msg);
         }
 
@@ -59,6 +60,7 @@ namespace AndroidApp4
             _textboxResults.Text = $"{line}\r\n{_textboxResults.Text}";
             Console.WriteLine(line);
         }
+
     }
 }
 

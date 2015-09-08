@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="Monkey.Robotics">
+  <name>Monkey.Robotics - Beta</name>
+  <publisher>Xamarin Inc.</publisher>
+  <publisher-url>https://github.com/xamarin/Monkey.Robotics</publisher-url>
+  <docs-url>https://github.com/xamarin/Monkey.Robotics</docs-url>
+  <src-url>https://github.com/xamarin/Monkey.Robotics/tree/master/Source</src-url>
+  <version>0.5.2</version>
+  <summary>Create robotic projects and integrate them with Xamarin apps.</summary>
+  <samples>
+    <sample id="BLE Explorer">
+      <name>Xamarin.Forms Mobile Sample - BLE Explorer.</name>
+      <summary>A complete mobile sample that runs on iOS and Android and allows you to list, connect to, and communicate with, BLE devices around you. .</summary>
+    </sample>
+  </samples>
+</component>

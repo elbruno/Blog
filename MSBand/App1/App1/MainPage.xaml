@@ -1,0 +1,42 @@
+﻿<Page x:Class="App1.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:App1"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="ButtonConnect"
+                Content="Connect"
+                Height="70"
+                Margin="10,10,0,0"
+                VerticalAlignment="Top"
+                Width="158"
+                Click="button_Click" />
+        <TextBlock x:Name="textBlockBandInformation"
+                   Margin="10,85,0,0"
+                   TextWrapping="Wrap"
+                   Text="Band Information"
+                   HorizontalAlignment="Left"
+                   Height="169"
+                   VerticalAlignment="Top"
+                   Width="158" />
+        <Button x:Name="buttonSendWarning"
+                Content="Send Warning"
+                Height="70"
+                Margin="168,10,34,0"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Stretch"
+                d:LayoutOverrides="LeftPosition, RightPosition"
+                Click="buttonSendWarning_Click" />
+        <TextBlock x:Name="textBlockBandSensors"
+                   Margin="168,85,34,0"
+                   TextWrapping="Wrap"
+                   Text="Sensors"
+                   Height="169"
+                   VerticalAlignment="Top"
+                   d:LayoutOverrides="LeftPosition, RightPosition" />
+
+    </Grid>
+</Page>

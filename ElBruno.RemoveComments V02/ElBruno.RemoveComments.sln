@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElBruno.RemoveComments", "ElBruno.RemoveComments\ElBruno.RemoveComments\ElBruno.RemoveComments.csproj", "{78E2234C-E21A-407D-9150-D30353C2EF68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElBruno.RemoveComments.Vsix", "ElBruno.RemoveComments\ElBruno.RemoveComments.Vsix\ElBruno.RemoveComments.Vsix.csproj", "{5CD39B41-F9A6-43AD-B322-D21382015587}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{307DBEE8-7D22-4530-B3F0-7686568A4EC6}"
+	ProjectSection(SolutionItems) = preProject
+		License.txt = License.txt
+		Images\Message-Delete 256.png = Images\Message-Delete 256.png
+		Images\Message-Delete 32.png = Images\Message-Delete 32.png
+		Images\Message-Delete 512.png = Images\Message-Delete 512.png
+		Images\Preview.png = Images\Preview.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78E2234C-E21A-407D-9150-D30353C2EF68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E2234C-E21A-407D-9150-D30353C2EF68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E2234C-E21A-407D-9150-D30353C2EF68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E2234C-E21A-407D-9150-D30353C2EF68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CD39B41-F9A6-43AD-B322-D21382015587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD39B41-F9A6-43AD-B322-D21382015587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD39B41-F9A6-43AD-B322-D21382015587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD39B41-F9A6-43AD-B322-D21382015587}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

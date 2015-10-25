@@ -7,36 +7,47 @@
       mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="ButtonConnect"
-                Content="Connect"
-                Height="70"
-                Margin="10,10,0,0"
-                VerticalAlignment="Top"
-                Width="158"
-                Click="button_Click" />
-        <TextBlock x:Name="textBlockBandInformation"
-                   Margin="10,85,0,0"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="10"
+                    Orientation="Vertical">
+            <Button x:Name="ButtonConnect"
+                    Content="Connect"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Stretch"
+                    Click="button_Click" />
+            <Button x:Name="ButtonListTiles"
+                    Content="List Tiles"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Stretch"
+                    d:LayoutOverrides="LeftPosition, RightPosition"
+                    Click="ButtonListTiles_Click" />
+            <Button x:Name="ButtonAddTile"
+                    Content="Add Tile"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Stretch"
+                    d:LayoutOverrides="LeftPosition, RightPosition"
+                    Click="ButtonDisplayTileClick" />
+            <Button x:Name="ButtonRemoveTile"
+                    Content="Remove Tile"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Stretch"
+                    d:LayoutOverrides="LeftPosition, RightPosition"
+                    Click="ButtonRemoveTile_Click" />
+            <TextBlock x:Name="textBlockBandInformation"
+                       TextWrapping="Wrap"
+                       Text="{Binding BandData}"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Stretch" />
+        </StackPanel>
+        <TextBlock x:Name="textBlockStatus"
+                   Margin="10,0,10,0"
+                   Grid.Row="1"
                    TextWrapping="Wrap"
-                   Text="Band Information"
-                   HorizontalAlignment="Left"
-                   Height="169"
-                   VerticalAlignment="Top"
-                   Width="158" />
-        <Button x:Name="buttonSendWarning"
-                Content="Send Warning"
-                Height="70"
-                Margin="168,10,34,0"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Stretch"
-                d:LayoutOverrides="LeftPosition, RightPosition"
-                Click="buttonSendWarning_Click" />
-        <TextBlock x:Name="textBlockBandSensors"
-                   Margin="168,85,34,0"
-                   TextWrapping="Wrap"
-                   Text="Sensors"
-                   Height="169"
-                   VerticalAlignment="Top"
-                   d:LayoutOverrides="LeftPosition, RightPosition" />
-
+                   Text="{Binding StatusMessage}"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Stretch" />
     </Grid>
 </Page>

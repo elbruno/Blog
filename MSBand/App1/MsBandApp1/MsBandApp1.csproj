@@ -100,7 +100,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="BandInformation.cs" />
+    <Compile Include="MainPage.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
@@ -113,6 +114,8 @@
     <None Include="App1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Barcode24.png" />
+    <Content Include="Assets\Barcode46.png" />
     <Content Include="Assets\RugbyBall24.png" />
     <Content Include="Assets\RugbyBall46.png" />
     <Content Include="Assets\SampleTileIconLarge.png" />

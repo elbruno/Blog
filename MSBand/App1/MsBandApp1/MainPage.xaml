@@ -9,6 +9,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="25"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Margin="10"
@@ -22,32 +23,49 @@
                     Content="List Tiles"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Stretch"
-                    d:LayoutOverrides="LeftPosition, RightPosition"
                     Click="ButtonListTiles_Click" />
             <Button x:Name="ButtonAddTile"
-                    Content="Add Tile"
+                    Content="Add Simple Tile"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Stretch"
-                    d:LayoutOverrides="LeftPosition, RightPosition"
-                    Click="ButtonDisplayTileClick" />
+                    Click="ButtonAddSimpleTileClick" />
+            <Button x:Name="ButtonAddComplexTile"
+                    Content="Add Complex Tile"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Stretch"
+                    Click="ButtonAddComplexTile_Click" />
             <Button x:Name="ButtonRemoveTile"
-                    Content="Remove Tile"
+                    Content="Remove All Tiles"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Stretch"
-                    d:LayoutOverrides="LeftPosition, RightPosition"
-                    Click="ButtonRemoveTile_Click" />
-            <TextBlock x:Name="textBlockBandInformation"
+                    Click="ButtonRemoveAllTilesClick" />
+            <TextBlock Text="Band Information" />
+            <TextBlock x:Name="textBlockBandData"
                        TextWrapping="Wrap"
                        Text="{Binding BandData}"
                        VerticalAlignment="Top"
                        HorizontalAlignment="Stretch" />
         </StackPanel>
-        <TextBlock x:Name="textBlockStatus"
-                   Margin="10,0,10,0"
-                   Grid.Row="1"
-                   TextWrapping="Wrap"
-                   Text="{Binding StatusMessage}"
-                   VerticalAlignment="Bottom"
-                   HorizontalAlignment="Stretch" />
+        <StackPanel Margin="10,0,10,0"
+                    Grid.Row="1"
+                    Orientation="Vertical">
+            <TextBlock Text="Band Data" />
+            <TextBlock x:Name="textBlockBandUserActions"
+                       TextWrapping="Wrap"
+                       Text="{Binding BandUserActions}"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Stretch" />
+        </StackPanel>
+        <StackPanel Margin="10,0,10,0"
+                    Grid.Row="2"
+                    Orientation="Horizontal">
+            <TextBlock Text="Status" />
+            <TextBlock x:Name="textBlockStatus"
+                       TextWrapping="Wrap"
+                       Text="{Binding StatusMessage}"
+                       VerticalAlignment="Bottom"
+                       HorizontalAlignment="Stretch" />
+        </StackPanel>
+
     </Grid>
 </Page>

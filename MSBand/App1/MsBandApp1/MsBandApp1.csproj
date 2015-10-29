@@ -100,7 +100,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BandHub.cs" />
     <Compile Include="BandInformation.cs" />
+    <Compile Include="BandTileComplex.cs" />
+    <Compile Include="BandTileSimple.cs" />
+    <Compile Include="ImageHelper.cs" />
     <Compile Include="MainPage.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -116,10 +120,26 @@
   <ItemGroup>
     <Content Include="Assets\Barcode24.png" />
     <Content Include="Assets\Barcode46.png" />
+    <Content Include="Assets\CloudSun24.png" />
+    <Content Include="Assets\CloudSun46.png" />
+    <Content Include="Assets\House24.png" />
+    <Content Include="Assets\House46.png" />
+    <Content Include="Assets\Rain24.png" />
+    <Content Include="Assets\Rain46.png" />
     <Content Include="Assets\RugbyBall24.png" />
     <Content Include="Assets\RugbyBall46.png" />
     <Content Include="Assets\SampleTileIconLarge.png" />
     <Content Include="Assets\SampleTileIconSmall.png" />
+    <Content Include="Assets\Sun24.png" />
+    <Content Include="Assets\Sun46.png" />
+    <Content Include="Assets\Temperature24-2.png" />
+    <Content Include="Assets\Temperature24.png" />
+    <Content Include="Assets\Temperature46-2.png" />
+    <Content Include="Assets\Temperature46.png" />
+    <Content Include="Assets\Thunder24.png" />
+    <Content Include="Assets\Thunder46.png" />
+    <Content Include="Assets\Wow24.png" />
+    <Content Include="Assets\Wow46.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

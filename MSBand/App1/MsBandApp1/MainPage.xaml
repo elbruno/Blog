@@ -9,7 +9,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
             <RowDefinition Height="25"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Margin="10"
@@ -18,7 +18,7 @@
                     Content="Connect"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Stretch"
-                    Click="button_Click" />
+                    Click="ButtonConnectClick" />
             <Button x:Name="ButtonListTiles"
                     Content="List Tiles"
                     VerticalAlignment="Top"
@@ -34,6 +34,11 @@
                     VerticalAlignment="Top"
                     HorizontalAlignment="Stretch"
                     Click="ButtonAddComplexTile_Click" />
+            <Button x:Name="ButtonSetInfo"
+                    Content="Start / Stop Info"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Stretch"
+                    Click="ButtonSetInfo_Click" />
             <Button x:Name="ButtonRemoveTile"
                     Content="Remove All Tiles"
                     VerticalAlignment="Top"
@@ -63,7 +68,6 @@
             <TextBlock x:Name="textBlockStatus"
                        TextWrapping="Wrap"
                        Text="{Binding StatusMessage}"
-                       VerticalAlignment="Bottom"
                        HorizontalAlignment="Stretch" />
         </StackPanel>
 

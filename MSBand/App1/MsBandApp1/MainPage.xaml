@@ -34,11 +34,22 @@
                     VerticalAlignment="Top"
                     HorizontalAlignment="Stretch"
                     Click="ButtonAddComplexTile_Click" />
+
             <Button x:Name="ButtonSetInfo"
                     Content="Start / Stop Info"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Stretch"
                     Click="ButtonSetInfo_Click" />
+            <Button x:Name="ButtonSendMessage"
+                    Content="Send Message"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Stretch"
+                    Click="ButtonSendMessageClick" />
+            <Button x:Name="ButtonShowDialog"
+                    Content="Show Dialog"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Stretch"
+                    Click="ButtonShowDialog_Click" />            
             <Button x:Name="ButtonRemoveTile"
                     Content="Remove All Tiles"
                     VerticalAlignment="Top"

@@ -54,7 +54,6 @@ namespace App1
         {
             BandInfo = _pairedBands[0];
             BandClient = await BandClientManager.Instance.ConnectAsync(BandInfo);
-
         }
         private async Task GetBandInformation()
         {

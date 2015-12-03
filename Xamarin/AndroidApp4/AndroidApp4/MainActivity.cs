@@ -39,7 +39,7 @@ namespace AndroidApp4
         private void _bleAdapter_ScanTimeoutElapsed(object sender, EventArgs e)
         {
             _bleAdapter.StopScanningForDevices();
-            DisplayInformation("Bluetooth scan timeout elapsed, no heart rate monitors were found");
+            DisplayInformation("Bluetooth scan timeout elapsed, no ble devices were found");
         }
 
         private void _bleAdapter_DeviceDiscovered(object sender, DeviceDiscoveredEventArgs e)

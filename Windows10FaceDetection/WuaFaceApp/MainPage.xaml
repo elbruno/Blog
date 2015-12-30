@@ -1,0 +1,56 @@
+﻿<Page x:Class="WuaFaceApp.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:WuaFaceApp"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid Height="48">
+                    <TextBlock VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Margin="10,0,0,0"
+                               Text="El Bruno - Face detection" />
+                </Grid>
+            </CommandBar.Content>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Name="AppBarButtonDisplayFaces"
+                              Icon="Contact"
+                              Label="Display Faces"
+                              Command="{x:Bind DisplayFacesCommand}" />
+                <AppBarButton x:Name="AppBarButtonDisplayFacesEnabled"
+                              Icon="Contact2"
+                              Label="Display Faces"
+                              Command="{x:Bind DisplayFacesCommand}"
+                              Visibility="Collapsed"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+
+        <CaptureElement Name="CameraViewer"
+                        Grid.Row="1"
+                        Stretch="Uniform" />
+
+        <Canvas x:Name="FaceRectanglesCanvas"
+                Grid.Row="1"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                Background="Transparent">
+            <Rectangle StrokeThickness="3"
+                       Stroke="DeepPink" />
+        </Canvas>
+
+        <TextBlock Grid.Row="2"
+                   Text="{Binding Messages}"></TextBlock>
+
+    </Grid>
+</Page>

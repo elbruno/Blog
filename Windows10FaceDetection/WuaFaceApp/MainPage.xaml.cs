@@ -1,29 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Windows.Foundation;
-using Windows.Graphics.Imaging;
-using Windows.Media;
+using Windows.Devices.Enumeration;
 using Windows.Media.Capture;
 using Windows.Media.Core;
 using Windows.Media.FaceAnalysis;
 using Windows.Media.MediaProperties;
-using Windows.Storage;
-using Windows.Storage.Pickers;
-using Windows.Storage.Streams;
 using Windows.UI;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Media.Imaging;
-using Windows.UI.Xaml.Shapes;
 using WuaFaceApp.Annotations;
 using WuaFaceApp.Lib;
 
@@ -78,7 +68,7 @@ namespace WuaFaceApp
             {
                 if (!FaceDetector.IsSupported) return;
 
-                var cameraDevice = await CameraActions.FindCameraDeviceByPanelAsync(Windows.Devices.Enumeration.Panel.Front);
+                var cameraDevice = await CameraActions.FindCameraDeviceByPanelAsync(Panel.Front);
                 var settings = new MediaCaptureInitializationSettings { VideoDeviceId = cameraDevice.Id };
                 _mediaCapture = new MediaCapture();
                 await _mediaCapture.InitializeAsync(settings);

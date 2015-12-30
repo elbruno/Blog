@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.Foundation;
-using Windows.Graphics.Display;
+﻿using Windows.Foundation;
 using Windows.Graphics.Imaging;
 using Windows.Media.MediaProperties;
 using Windows.UI.Xaml.Controls;

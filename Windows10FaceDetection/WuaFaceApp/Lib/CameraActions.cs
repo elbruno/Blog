@@ -31,7 +31,7 @@ namespace WuaFaceApp.Lib
             return file;
         }
 
-        public static async Task<DeviceInformation> FindCameraDeviceByPanelAsync(Windows.Devices.Enumeration.Panel desiredPanel)
+        public static async Task<DeviceInformation> FindCameraDeviceByPanelAsync(Panel desiredPanel)
         {
             // Get available devices for capturing pictures
             var allVideoDevices = await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture);

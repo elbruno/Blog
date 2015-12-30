@@ -99,7 +99,6 @@ namespace WuaFaceApp
         private async void FaceDetectionEffect_FaceDetected(FaceDetectionEffect sender, FaceDetectedEventArgs args)
         {
             if (!_displayFaces) return;
-            // Use the dispatcher because this method is sometimes called from non-UI threads
             await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
                 RenderFaceRectangles(args.ResultFrame.DetectedFaces.ToList());

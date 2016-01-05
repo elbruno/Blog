@@ -19,14 +19,11 @@ namespace WuaFaceAppChristmas.Lib
             double streamWidth = previewStream.Width;
             double streamHeight = previewStream.Height;
 
-            // Get the rectangle that is occupied by the actual video feed
             var previewInUi = GetPreviewStreamRectInControl(previewStream, cameraViewer);
 
-            // Scale the width and height from preview stream coordinates to window coordinates
             result.Width = (faceBoxInPreviewCoordinates.Width / streamWidth) * previewInUi.Width;
             result.Height = (faceBoxInPreviewCoordinates.Height / streamHeight) * previewInUi.Height;
 
-            // Scale the X and Y coordinates from preview stream coordinates to window coordinates
             var x = (faceBoxInPreviewCoordinates.X / streamWidth) * previewInUi.Width;
             var y = (faceBoxInPreviewCoordinates.Y / streamHeight) * previewInUi.Height;
             Canvas.SetLeft(result, x);
@@ -44,14 +41,11 @@ namespace WuaFaceAppChristmas.Lib
             double streamWidth = previewStream.Width;
             double streamHeight = previewStream.Height;
 
-            // Get the rectangle that is occupied by the actual video feed
             var previewInUi = GetPreviewStreamRectInControl(previewStream, cameraViewer);
 
-            // Scale the width and height from preview stream coordinates to window coordinates
             imageHat.Width = (faceBoxInPreviewCoordinates.Width / streamWidth) * previewInUi.Width;
             imageHat.Height = (faceBoxInPreviewCoordinates.Height / streamHeight) * previewInUi.Height;
 
-            // Scale the X and Y coordinates from preview stream coordinates to window coordinates
             var x = (faceBoxInPreviewCoordinates.X / streamWidth) * previewInUi.Width;
             var y = (faceBoxInPreviewCoordinates.Y / streamHeight) * previewInUi.Height;
             Canvas.SetLeft(imageHat, x);

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="XfBeacon02.Droid" android:installLocation="auto" android:versionName="1.5.8" android:versionCode="1">
+	<uses-sdk />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<application android:label="XfBeacon02.Droid"></application>
+</manifest>

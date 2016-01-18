@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="estimotesdkandroid">
+  <name>Estimote SDK for Android</name>
+  <publisher>Xamarin Inc.</publisher>
+  <publisher-url>https://www.xamarin.com</publisher-url>
+  <src-url>https://www.xamarin.com</src-url>
+  <version>0.9.1.0</version>
+  <summary>Estimote SDK for Xamarin.Android to actively scan for Bluetooth Beacons, Nearables, and Eddystones.</summary>
+  <packages>
+    <package id="Xamarin.Estimote.Android" version="0.9.1.0" framework="android" />
+  </packages>
+  <samples>
+    <sample id="EstimoteSample">
+      <name>Estimote Sample</name>
+      <summary>Estimote Sample</summary>
+    </sample>
+  </samples>
+</component>

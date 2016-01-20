@@ -6,7 +6,6 @@
         {
             InitializeComponent();
             BindingContext = ViewModelLocator.BeaconExplorerViewModel;
-            //ListViewBeacons.ItemsSource = ViewModelLocator.BeaconExplorerViewModel.Beacons;
         }
 
         protected override void OnAppearing()

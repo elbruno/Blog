@@ -58,7 +58,6 @@ namespace XfBeacon02
                     LogStatus(@"beacons initialized");
                     EstimoteManager.Instance.Ranged += Instance_Ranged;
                     EstimoteManager.Instance.RegionStatusChanged += Instance_RegionStatusChanged;
-                    EstimoteManager.Instance.StartMonitoring(new BeaconRegion("iOS Beacon", EstimoteUuid));
                     EstimoteManager.Instance.StartRanging(new BeaconRegion("iOS Beacon", EstimoteUuid));
                 }
             }

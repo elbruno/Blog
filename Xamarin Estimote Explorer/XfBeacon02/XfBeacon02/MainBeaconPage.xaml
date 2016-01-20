@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XfBeacon02.MainBeaconPage">
+
+  <Grid BackgroundColor="White">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="50" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="50" />
+    </Grid.RowDefinitions>
+    <StackLayout Grid.Row="0"
+                 Orientation="Horizontal"
+                 BackgroundColor="White"
+                 Padding="10">
+      <Image Source="EstimotePurple.png"
+             HeightRequest="50"
+             WidthRequest="50"
+             Aspect="Fill" />
+      <Label Text="El Bruno - Estimote Explorer"
+             Font="Large"
+             HorizontalOptions="Center"
+             VerticalOptions="Center" />
+
+    </StackLayout>
+
+    <ListView x:Name="ListViewBeacons"
+              ItemsSource="{Binding Beacons}"
+              Grid.Row="1">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ImageCell Text ="{Binding Text}"
+                     Detail="{Binding Detail}"
+                     ImageSource="{Binding ImageSource}"
+                     DetailColor="{Binding DetailColor}"/>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+    <Label x:Name="LabelLog"
+           Font="Small"
+           Text="{Binding LogStatus}"
+           HorizontalOptions="Center"
+           Grid.Row="2"
+           VerticalOptions="EndAndExpand" />
+
+  </Grid>
+</ContentPage>

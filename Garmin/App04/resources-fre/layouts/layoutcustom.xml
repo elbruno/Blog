@@ -1,0 +1,4 @@
+<layout id="CustomLayout">
+    <label x="center" y="5" text="@Strings.prompt" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <bitmap id="id_martina" x="center" y="30" filename="../drawables/france.png" />
+</layout>

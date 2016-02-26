@@ -28,7 +28,7 @@ class App07View extends Ui.View {
         dc.setColor( Gfx.COLOR_TRANSPARENT, Gfx.COLOR_BLACK );
         dc.clear();
         dc.setColor( Gfx.COLOR_PURPLE , Gfx.COLOR_TRANSPARENT );
-        string = "El Bruno - Sensors";
+        string = "El Bruno - Position";
         dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) - 60), Gfx.FONT_MEDIUM , string, Gfx.TEXT_JUSTIFY_CENTER );
         if( _posInfo != null && _hrData != null) {
 	        dc.setColor( Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT );

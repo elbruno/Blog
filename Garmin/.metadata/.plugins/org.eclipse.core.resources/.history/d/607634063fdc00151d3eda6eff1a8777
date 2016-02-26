@@ -46,9 +46,9 @@ class App07View extends Ui.View {
             dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) + 20), Gfx.FONT_TINY, string, Gfx.TEXT_JUSTIFY_CENTER );
 	        dc.setColor( Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT );
             string = "Lat = " + _posInfo.position.toDegrees()[0].toString();
-            dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) + 35), Gfx.FONT_TINY, string, Gfx.TEXT_JUSTIFY_CENTER );
+            dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) + 30), Gfx.FONT_TINY, string, Gfx.TEXT_JUSTIFY_CENTER );
             string = "Long = " + _posInfo.position.toDegrees()[1].toString();
-            dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) + 50), Gfx.FONT_TINY, string, Gfx.TEXT_JUSTIFY_CENTER );
+            dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) + 40), Gfx.FONT_TINY, string, Gfx.TEXT_JUSTIFY_CENTER );
             
             // draw HR chart
             HR_graph.draw( dc, [5,30], [220,129] );

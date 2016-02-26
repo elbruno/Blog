@@ -1,5 +1,4 @@
 cmp_showWarnings=true
-console_clear_on_build=true
 console_error_coloring=204,0,0
 console_info_coloring=51,204,51
 console_output_error_details=true

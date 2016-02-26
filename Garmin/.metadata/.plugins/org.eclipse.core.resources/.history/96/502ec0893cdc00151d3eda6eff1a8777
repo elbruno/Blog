@@ -9,7 +9,7 @@ class App07View extends Ui.View {
     var _hrData;
         
     function setSensor(sensorInfo) {
-    	_hrData = sensorInfo.heartRate;
+    	_hrData = "Hr " + sensorInfo.heartRate +" bpm";
     	System.println( _hrData );
     	Ui.requestUpdate();
     }
@@ -42,7 +42,7 @@ class App07View extends Ui.View {
             dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) + 20), Gfx.FONT_SMALL, string, Gfx.TEXT_JUSTIFY_CENTER );
             string = "details = not defined";
             dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) + 40), Gfx.FONT_SMALL, string, Gfx.TEXT_JUSTIFY_CENTER );
-            string = "HR: " + _hrData + " Bpm";
+            string = "HR: " + _hrData;
             dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) + 60), Gfx.FONT_SMALL, string, Gfx.TEXT_JUSTIFY_CENTER );
         }
         else {

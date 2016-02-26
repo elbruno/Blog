@@ -6,8 +6,6 @@ class App07App extends App.AppBase {
 
     function onStart() {
         Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:onPosition));
-        Sensor.setEnabledSensors( [Sensor.SENSOR_HEARTRATE] );
-    	Sensor.enableSensorEvents( method( :onSensor ) );
     }
 
     function onStop() {
@@ -16,10 +14,6 @@ class App07App extends App.AppBase {
 
     function onPosition(info) {
         positionView.setPosition(info);
-    }
-    
-    function onSensor(sensorInfo) {
-    	positionView.setSensor(sensorInfo);
     }
 
     function getInitialView() {

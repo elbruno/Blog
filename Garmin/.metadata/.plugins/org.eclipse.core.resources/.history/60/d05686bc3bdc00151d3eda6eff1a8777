@@ -6,12 +6,11 @@ using Toybox.Lang as Lang;
 class App07View extends Ui.View {
 
     var _posInfo = null;
-    var _hrData;
-        
-    function setSensor(sensorInfo) {
-    	_hrData = sensorInfo.heartRate;
-    	System.println( _hrData );
-    	Ui.requestUpdate();
+    
+    function initialize() {
+        WatchFace.initialize();
+    	Sensor.setEnabledSensors( [Sensor.SENSOR_HEARTRATE] );
+    	Sensor.enableSensorEvents( method( :onSensor ) );
     }
 
     function onLayout(dc) {
@@ -42,8 +41,6 @@ class App07View extends Ui.View {
             dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) + 20), Gfx.FONT_SMALL, string, Gfx.TEXT_JUSTIFY_CENTER );
             string = "details = not defined";
             dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) + 40), Gfx.FONT_SMALL, string, Gfx.TEXT_JUSTIFY_CENTER );
-            string = "HR: " + _hrData + " Bpm";
-            dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) + 60), Gfx.FONT_SMALL, string, Gfx.TEXT_JUSTIFY_CENTER );
         }
         else {
             dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2), Gfx.FONT_SMALL, "No position info", Gfx.TEXT_JUSTIFY_CENTER );

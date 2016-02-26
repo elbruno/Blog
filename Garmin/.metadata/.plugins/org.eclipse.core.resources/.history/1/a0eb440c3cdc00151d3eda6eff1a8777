@@ -7,10 +7,16 @@ class App07View extends Ui.View {
 
     var _posInfo = null;
     var _hrData;
-        
-    function setSensor(sensorInfo) {
-    	_hrData = sensorInfo.heartRate;
-    	System.println( _hrData );
+    
+    function initialize() {
+        WatchFace.initialize();
+    	Sensor.setEnabledSensors( [Sensor.SENSOR_HEARTRATE] );
+    	Sensor.enableSensorEvents( method( :onSensor ) );
+    }
+    
+    function onSensor(sensorInfo) {
+    	_hrData = "Hr(" + sensorInfo.heartRate +")";
+    	System.println( hrData );
     	Ui.requestUpdate();
     }
 
@@ -42,7 +48,7 @@ class App07View extends Ui.View {
             dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) + 20), Gfx.FONT_SMALL, string, Gfx.TEXT_JUSTIFY_CENTER );
             string = "details = not defined";
             dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) + 40), Gfx.FONT_SMALL, string, Gfx.TEXT_JUSTIFY_CENTER );
-            string = "HR: " + _hrData + " Bpm";
+            string = "HR: " + _hrData;
             dc.drawText( (dc.getWidth() / 2), ((dc.getHeight() / 2) + 60), Gfx.FONT_SMALL, string, Gfx.TEXT_JUSTIFY_CENTER );
         }
         else {

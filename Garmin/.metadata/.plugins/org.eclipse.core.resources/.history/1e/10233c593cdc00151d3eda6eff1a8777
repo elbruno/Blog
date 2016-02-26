@@ -17,10 +17,6 @@ class App07App extends App.AppBase {
     function onPosition(info) {
         positionView.setPosition(info);
     }
-    
-    function onSensor(sensorInfo) {
-    	positionView.setSensor(sensorInfo);
-    }
 
     function getInitialView() {
         positionView = new App07View();

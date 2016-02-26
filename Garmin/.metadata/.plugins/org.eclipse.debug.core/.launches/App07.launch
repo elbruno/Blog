@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="connectiq.launcher.AppLauncher">
+<stringAttribute key="connectiq.debugInfo" value="C:\src\git\eb\Blog\Garmin\App07\bin\App07.prg.debug.xml"/>
+<stringAttribute key="connectiq.prg" value="C:\src\git\eb\Blog\Garmin\App07\bin\App07.prg"/>
+<stringAttribute key="connectiq.project" value="App07"/>
+<stringAttribute key="connectiq.targetDevice" value="fr235"/>
+<stringAttribute key="connectiq.workingDir" value="C:\src\git\eb\Blog\Garmin\App07"/>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+</launchConfiguration>

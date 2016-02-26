@@ -1,0 +1,14 @@
+cmp_showWarnings=true
+console_clear_on_build=true
+console_error_coloring=204,0,0
+console_info_coloring=51,204,51
+console_output_error_details=true
+console_warning_coloring=255,204,0
+eclipse.preferences.version=1
+editor_syntax_coloring_comment=81,199,83
+editor_syntax_coloring_keyword=64,0,223
+editor_syntax_coloring_name=225,213,39
+editor_syntax_coloring_number=80,80,80
+editor_syntax_coloring_object=17,0,255
+editor_syntax_coloring_string=81,159,93
+pathPreference=E\:\\Garmin\\connectiq-sdk-win-1.2.5

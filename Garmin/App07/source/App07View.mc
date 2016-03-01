@@ -15,10 +15,7 @@ class App07View extends Ui.View {
             
     function setSensor(sensorInfo) {
     	_hrData = sensorInfo.heartRate;
-    	
-    	//Add value to graph
-        HR_graph.addItem(_hrData);
-    	
+    	HR_graph.addItem(_hrData);
     	Ui.requestUpdate();
     }
 

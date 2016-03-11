@@ -49,6 +49,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PclAzureIoT\PclAzureIoT.csproj">
+      <Project>{0a0da77b-1fcb-4020-8947-360dc227a634}</Project>
+      <Name>PclAzureIoT</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

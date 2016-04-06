@@ -15,7 +15,6 @@ namespace Microsoft.ProjectOxford.Autosuggest
             AuthValue = subscriptionKey;
         }
 
-
         public async Task<Contract.Autosuggest> RecognizeAsync(string query)
         {
             Contract.Autosuggest autoSuggestValue = null;
@@ -26,14 +25,9 @@ namespace Microsoft.ProjectOxford.Autosuggest
             if (!response.IsSuccessStatusCode) return null;
             string responseContent = null;
             if (response.Content != null)
-            {
                 responseContent = await response.Content.ReadAsStringAsync();
-            }
-
             if (!string.IsNullOrWhiteSpace(responseContent))
-            {
                 autoSuggestValue = JsonConvert.DeserializeObject<Contract.Autosuggest>(responseContent, s_settings);
-            }
             return autoSuggestValue;
         }
 

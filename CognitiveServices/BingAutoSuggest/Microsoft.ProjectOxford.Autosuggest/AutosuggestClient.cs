@@ -8,8 +8,7 @@ namespace Microsoft.ProjectOxford.Autosuggest
 {
     public class AutosuggestServiceClient : ServiceClient, IAutosuggestServiceClient
     {
-
-        public AutosuggestServiceClient(string subscriptionKey) : base()
+        public AutosuggestServiceClient(string subscriptionKey)
         {
             ApiRoot = "https://bingapis.azure-api.net/api/v5/suggestions";
             AuthKey = "Ocp-Apim-Subscription-Key";
@@ -21,15 +20,10 @@ namespace Microsoft.ProjectOxford.Autosuggest
         {
             Contract.Autosuggest autoSuggestValue = null;
             var client = new HttpClient();
-
-            // Request headers
             client.DefaultRequestHeaders.Add(AuthKey, AuthValue);
-
-            // Request parameters
             var uri = GetApiUrl(query);
-
             var response = await client.GetAsync(uri);
-            if (!response.IsSuccessStatusCode) return autoSuggestValue;
+            if (!response.IsSuccessStatusCode) return null;
             string responseContent = null;
             if (response.Content != null)
             {
@@ -51,7 +45,5 @@ namespace Microsoft.ProjectOxford.Autosuggest
             builder.Append(query);
             return builder.ToString();
         }
-
-
     }
 }

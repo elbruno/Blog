@@ -42,6 +42,9 @@
   <ItemGroup>
     <Compile Include="AutosuggestClient.cs" />
     <Compile Include="Contract\Autosuggest.cs" />
+    <Compile Include="Contract\QueryContext.cs" />
+    <Compile Include="Contract\SearchSuggestion.cs" />
+    <Compile Include="Contract\SuggestionGroup.cs" />
     <Compile Include="IAutosuggestClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

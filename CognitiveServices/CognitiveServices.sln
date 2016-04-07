@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bing Autosuggest", "Bing Autosuggest", "{10D1BB5F-E938-46A1-8E29-FDF1884E2B49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bing Search", "Bing Search", "{AD3749DE-77AA-4676-BE21-EEDC5F8B5424}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.ProjectOxford.Autosuggest", "BingAutoSuggest\Microsoft.ProjectOxford.Autosuggest\Microsoft.ProjectOxford.Autosuggest.csproj", "{9AC974EE-410A-4A1A-B72C-0498B7B6A0FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingAutoSuggestConsoleTestApp", "BingAutoSuggest\BingAutoSuggestConsoleTestApp\BingAutoSuggestConsoleTestApp.csproj", "{AEF68F86-9D4C-4D61-8FA9-D18B5A7700C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.ProjectOxford.Search", "BingSearch\Microsoft.ProjectOxford.Search\Microsoft.ProjectOxford.Search.csproj", "{5D28BD58-A2BC-4FEC-8703-805F1CCA3FE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingSearchConsoleTestApp", "BingSearch\BingSearchConsoleTestApp\BingSearchConsoleTestApp.csproj", "{D1C53DEF-10C6-4390-A15C-5AD73DBE1BD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AC974EE-410A-4A1A-B72C-0498B7B6A0FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC974EE-410A-4A1A-B72C-0498B7B6A0FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC974EE-410A-4A1A-B72C-0498B7B6A0FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC974EE-410A-4A1A-B72C-0498B7B6A0FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEF68F86-9D4C-4D61-8FA9-D18B5A7700C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF68F86-9D4C-4D61-8FA9-D18B5A7700C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF68F86-9D4C-4D61-8FA9-D18B5A7700C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF68F86-9D4C-4D61-8FA9-D18B5A7700C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D28BD58-A2BC-4FEC-8703-805F1CCA3FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D28BD58-A2BC-4FEC-8703-805F1CCA3FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D28BD58-A2BC-4FEC-8703-805F1CCA3FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D28BD58-A2BC-4FEC-8703-805F1CCA3FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1C53DEF-10C6-4390-A15C-5AD73DBE1BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1C53DEF-10C6-4390-A15C-5AD73DBE1BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1C53DEF-10C6-4390-A15C-5AD73DBE1BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1C53DEF-10C6-4390-A15C-5AD73DBE1BD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9AC974EE-410A-4A1A-B72C-0498B7B6A0FB} = {10D1BB5F-E938-46A1-8E29-FDF1884E2B49}
+		{AEF68F86-9D4C-4D61-8FA9-D18B5A7700C5} = {10D1BB5F-E938-46A1-8E29-FDF1884E2B49}
+		{5D28BD58-A2BC-4FEC-8703-805F1CCA3FE8} = {AD3749DE-77AA-4676-BE21-EEDC5F8B5424}
+		{D1C53DEF-10C6-4390-A15C-5AD73DBE1BD0} = {AD3749DE-77AA-4676-BE21-EEDC5F8B5424}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://elbruno.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BingAutoSuggest\\Microsoft.ProjectOxford.Autosuggest\\Microsoft.ProjectOxford.Autosuggest.csproj
+		SccProjectTopLevelParentUniqueName1 = CognitiveServices.sln
+		SccProjectName1 = BingAutoSuggest/Microsoft.ProjectOxford.Autosuggest
+		SccLocalPath1 = BingAutoSuggest\\Microsoft.ProjectOxford.Autosuggest
+		SccProjectUniqueName2 = BingAutoSuggest\\BingAutoSuggestConsoleTestApp\\BingAutoSuggestConsoleTestApp.csproj
+		SccProjectTopLevelParentUniqueName2 = CognitiveServices.sln
+		SccProjectName2 = BingAutoSuggest/BingAutoSuggestConsoleTestApp
+		SccLocalPath2 = BingAutoSuggest\\BingAutoSuggestConsoleTestApp
+		SccProjectUniqueName3 = BingSearch\\Microsoft.ProjectOxford.Search\\Microsoft.ProjectOxford.Search.csproj
+		SccProjectTopLevelParentUniqueName3 = CognitiveServices.sln
+		SccProjectName3 = BingSearch/Microsoft.ProjectOxford.Search
+		SccLocalPath3 = BingSearch\\Microsoft.ProjectOxford.Search
+		SccProjectUniqueName4 = BingSearch\\BingSearchConsoleTestApp\\BingSearchConsoleTestApp.csproj
+		SccProjectTopLevelParentUniqueName4 = CognitiveServices.sln
+		SccProjectName4 = BingSearch/BingSearchConsoleTestApp
+		SccLocalPath4 = BingSearch\\BingSearchConsoleTestApp
+	EndGlobalSection
+EndGlobal

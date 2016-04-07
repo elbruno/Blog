@@ -20,7 +20,7 @@ namespace ConsoleApplication1
         private static async void GetAutoSuggest(string query)
         {
             var autoSuggestServiceClient = new AutosuggestServiceClient(_subscriptionKey);
-            var autosuggestResult = await autoSuggestServiceClient.RecognizeAsync(query);
+            var autosuggestResult = await autoSuggestServiceClient.SuggestAsync(query);
             Console.WriteLine("Query: " + query);
             Console.WriteLine(" Type: " + autosuggestResult._type);
 

@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.ProjectOxford.Sea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingSearchConsoleTestApp", "BingSearch\BingSearchConsoleTestApp\BingSearchConsoleTestApp.csproj", "{D1C53DEF-10C6-4390-A15C-5AD73DBE1BD0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TextAnalytics", "TextAnalytics", "{191DEEDA-646D-4038-9E61-463E12B144BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.ProjectOxford.TextAnalytics", "TextAnalytics\Microsoft.ProjectOxford.TextAnalytics\Microsoft.ProjectOxford.TextAnalytics.csproj", "{208C3097-0BBA-4EC2-969D-79859FD23C8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalyticsConsoleTestAppConsoleTestApp", "TextAnalytics\TextAnalyticsConsoleTestApp\TextAnalyticsConsoleTestAppConsoleTestApp.csproj", "{A4D88800-6C39-46EB-9BB7-28671925EFB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +43,14 @@ Global
 		{D1C53DEF-10C6-4390-A15C-5AD73DBE1BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1C53DEF-10C6-4390-A15C-5AD73DBE1BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1C53DEF-10C6-4390-A15C-5AD73DBE1BD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{208C3097-0BBA-4EC2-969D-79859FD23C8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{208C3097-0BBA-4EC2-969D-79859FD23C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{208C3097-0BBA-4EC2-969D-79859FD23C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{208C3097-0BBA-4EC2-969D-79859FD23C8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4D88800-6C39-46EB-9BB7-28671925EFB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4D88800-6C39-46EB-9BB7-28671925EFB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4D88800-6C39-46EB-9BB7-28671925EFB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4D88800-6C39-46EB-9BB7-28671925EFB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,9 +60,11 @@ Global
 		{AEF68F86-9D4C-4D61-8FA9-D18B5A7700C5} = {10D1BB5F-E938-46A1-8E29-FDF1884E2B49}
 		{5D28BD58-A2BC-4FEC-8703-805F1CCA3FE8} = {AD3749DE-77AA-4676-BE21-EEDC5F8B5424}
 		{D1C53DEF-10C6-4390-A15C-5AD73DBE1BD0} = {AD3749DE-77AA-4676-BE21-EEDC5F8B5424}
+		{208C3097-0BBA-4EC2-969D-79859FD23C8D} = {191DEEDA-646D-4038-9E61-463E12B144BE}
+		{A4D88800-6C39-46EB-9BB7-28671925EFB2} = {191DEEDA-646D-4038-9E61-463E12B144BE}
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
+		SccNumberOfProjects = 7
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://elbruno.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
@@ -68,5 +84,13 @@ Global
 		SccProjectTopLevelParentUniqueName4 = CognitiveServices.sln
 		SccProjectName4 = BingSearch/BingSearchConsoleTestApp
 		SccLocalPath4 = BingSearch\\BingSearchConsoleTestApp
+		SccProjectUniqueName5 = TextAnalytics\\Microsoft.ProjectOxford.TextAnalytics\\Microsoft.ProjectOxford.TextAnalytics.csproj
+		SccProjectTopLevelParentUniqueName5 = CognitiveServices.sln
+		SccProjectName5 = TextAnalytics/Microsoft.ProjectOxford.TextAnalytics
+		SccLocalPath5 = TextAnalytics\\Microsoft.ProjectOxford.TextAnalytics
+		SccProjectUniqueName6 = TextAnalytics\\TextAnalyticsConsoleTestApp\\TextAnalyticsConsoleTestAppConsoleTestApp.csproj
+		SccProjectTopLevelParentUniqueName6 = CognitiveServices.sln
+		SccProjectName6 = TextAnalytics/TextAnalyticsConsoleTestApp
+		SccLocalPath6 = TextAnalytics\\TextAnalyticsConsoleTestApp
 	EndGlobalSection
 EndGlobal

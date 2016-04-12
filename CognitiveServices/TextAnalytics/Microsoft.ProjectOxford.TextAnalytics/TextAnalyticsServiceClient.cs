@@ -14,6 +14,7 @@ namespace Microsoft.ProjectOxford.TextAnalytics
     {
         private string _languageUri = "https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/languages";
         private string _sentimentUri = "https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment";
+        private string _keyphrasesUri = "https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/keyPhrases";
 
         public TextAnalyticsServiceClient(string subscriptionKey) 
         {
@@ -97,5 +98,42 @@ namespace Microsoft.ProjectOxford.TextAnalytics
             return responseSentiment;
         }
 
+        public async Task<Contract.KeyPhraseResponse.KeyPhrase> DetectKeyPhrasesAsync(string text)
+        {
+            Contract.KeyPhraseResponse.KeyPhrase responseKeyPhrases = null;
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Add(AuthKey, AuthValue);
+
+            var requestText = new Contract.KeyPhraseRequest.Text();
+            var doc = new Contract.KeyPhraseRequest.Document()
+            {
+                id = "string",
+                text = text
+            };
+            requestText.documents.Add(doc);
+
+            HttpResponseMessage response;
+            var req = JsonConvert.SerializeObject(requestText);
+            var byteData = Encoding.UTF8.GetBytes(req);
+
+            using (var content = new ByteArrayContent(byteData))
+            {
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                response = await client.PostAsync(_keyphrasesUri, content);
+            }
+
+            if (!response.IsSuccessStatusCode) return responseKeyPhrases;
+            string responseContent = null;
+            if (response.Content != null)
+            {
+                responseContent = await response.Content.ReadAsStringAsync();
+            }
+
+            if (!string.IsNullOrWhiteSpace(responseContent))
+            {
+                responseKeyPhrases = JsonConvert.DeserializeObject<Contract.KeyPhraseResponse.KeyPhrase>(responseContent, s_settings);
+            }
+            return responseKeyPhrases;
+        }
     }
 }

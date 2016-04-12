@@ -8,5 +8,6 @@ namespace Microsoft.ProjectOxford.TextAnalytics
     {
         Task<Text> AnalyzeLanguageAsync(string text);
         Task<Contract.SentimentResponse.Sentiment> AnalyzeSentimentAsync(string text);
+        Task<Contract.KeyPhraseResponse.KeyPhrase> DetectKeyPhrasesAsync(string text);
     }
 }

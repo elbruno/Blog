@@ -40,6 +40,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Contract\KeyPhraseResponse\Document.cs" />
+    <Compile Include="Contract\KeyPhraseRequest\Document.cs" />
+    <Compile Include="Contract\KeyPhraseRequest\Text.cs" />
+    <Compile Include="Contract\KeyPhraseResponse\Error.cs" />
+    <Compile Include="Contract\KeyPhraseResponse\KeyPhrase.cs" />
     <Compile Include="Contract\LanguageRequest\Document.cs" />
     <Compile Include="Contract\LanguageRequest\Text.cs" />
     <Compile Include="Contract\LanguageResponse\DetectedLanguage.cs" />

@@ -32,6 +32,7 @@ namespace TextAnalyticsConsoleTestAppConsoleTestApp
             Console.WriteLine("");
             await AnalyzeLanguage(text, analyticsServiceClient);
             await AnalyzeSentiment(text, analyticsServiceClient);
+            await DetectKeyPhrases(text, analyticsServiceClient);
 
             Console.WriteLine("Done !");
             Console.WriteLine("");
@@ -66,6 +67,23 @@ namespace TextAnalyticsConsoleTestAppConsoleTestApp
             }
 
             foreach (var error in sentiment.errors)
+            {
+                Console.WriteLine($@"  - Id: {error.id}, {error.message}");
+            }
+        }
+        private static async Task DetectKeyPhrases(string text, TextAnalyticsServiceClient analyticsServiceClient)
+        {
+            var keyphrases = await analyticsServiceClient.DetectKeyPhrasesAsync(text);
+            Console.WriteLine(" - KeyPhrases ");
+            foreach (var document in keyphrases.documents)
+            {
+                foreach (var keyPhrase in document.keyPhrases)
+                {
+                    Console.WriteLine($@"  key phrase: {keyPhrase}");
+                }
+            }
+
+            foreach (var error in keyphrases.errors)
             {
                 Console.WriteLine($@"  - Id: {error.id}, {error.message}");
             }

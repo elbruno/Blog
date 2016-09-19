@@ -74,8 +74,9 @@ surface and AirTap";
 			_textNode.LookAt(LeftCamera.Node.WorldPosition, new Vector3(0, 1, 0), TransformSpace.World);
 			_textNode.Rotate(new Quaternion(0, 180, 0), TransformSpace.World);
 
-			Ray cameraRay = RightCamera.GetScreenRay(0.5f, 0.5f);
-			var result = Scene.GetComponent<Octree>().RaycastSingle(cameraRay, RayQueryLevel.Triangle, 100, DrawableFlags.Geometry, 0x70000000);
+			var cameraRay = RightCamera.GetScreenRay(0.5f, 0.5f);
+			var result = Scene.GetComponent<Octree>().RaycastSingle
+                (cameraRay, RayQueryLevel.Triangle, 100, DrawableFlags.Geometry, 0x70000000);
 			if (result != null && result.Count > 0)
 			{
 				var angle = Vector3.CalculateAngle(new Vector3(0, 1, 0), result[0].Normal);
@@ -117,7 +118,8 @@ AirTap to throw";
 
 			var ball = ballNode.CreateComponent<StaticModel>();
 			ball.Model = CoreAssets.Models.Sphere;
-			ball.SetMaterial(Material.FromColor(new Color(Randoms.Next(0.2f, 1f), Randoms.Next(0.2f, 1f), Randoms.Next(0.2f, 1f))));
+			ball.SetMaterial(Material.FromColor(new Color(Randoms.Next(0.2f, 1f), 
+                Randoms.Next(0.2f, 1f), Randoms.Next(0.2f, 1f))));
 			ball.ViewMask = 0x80000000; //hide from raycasts
 
 			var ballRigidBody = ballNode.CreateComponent<RigidBody>();
@@ -126,7 +128,8 @@ AirTap to throw";
 			var ballShape = ballNode.CreateComponent<CollisionShape>();
 			ballShape.SetSphere(1, Vector3.Zero, Quaternion.Identity);
 
-			ball.GetComponent<RigidBody>().SetLinearVelocity(RightCamera.Node.Rotation * new Vector3(0f, 0.25f, 1f) * 9 /*velocity*/);
+			ball.GetComponent<RigidBody>().SetLinearVelocity
+                (RightCamera.Node.Rotation * new Vector3(0f, 0.25f, 1f) * 9 /*velocity*/);
 
 			_balls.Enqueue(ballNode);
 			if (_balls.Count > MaxBalls)
@@ -138,9 +141,9 @@ AirTap to throw";
 			Vector3 boundsCenter, Quaternion boundsRotation)
 		{
 
-			bool isNew = false;
+			var isNew = false;
 			StaticModel staticModel = null;
-			Node node = _environmentNode.GetChild(surfaceId, false);
+			var node = _environmentNode.GetChild(surfaceId, false);
 			if (node != null)
 			{
 				isNew = false;

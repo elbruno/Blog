@@ -26,8 +26,7 @@ namespace ElBruno.Urho04
             _spatialMaterial.SetTechnique(0, CoreAssets.Techniques.NoTextureUnlitVCol, 1, 1);
             await StartSpatialMapping(new Vector3(50, 50, 10), 1200, onlyAdd: true);
         }
-
-
+        
         public override void OnGestureTapped(GazeInfo gaze)
         {
             _showGaze = !_showGaze;
@@ -78,6 +77,5 @@ namespace ElBruno.Urho04
         {
             _environmentNode.Position = relativeHandPosition + _envPositionBeforeManipulations;
         }
-
     }
 }

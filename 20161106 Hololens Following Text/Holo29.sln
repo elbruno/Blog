@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{C18E0BFC-14B4-A005-026D-5B4D359A5A38}") = "Holo29", "Assembly-CSharp.csproj", "{6147D483-B777-9A9C-330B-72DFA397019D}"
+EndProject
+Project("{C18E0BFC-14B4-A005-026D-5B4D359A5A38}") = "Holo29", "Assembly-CSharp-Editor.csproj", "{C2B3BA6F-DDB5-7284-DE70-B65905658A9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6147D483-B777-9A9C-330B-72DFA397019D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6147D483-B777-9A9C-330B-72DFA397019D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6147D483-B777-9A9C-330B-72DFA397019D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6147D483-B777-9A9C-330B-72DFA397019D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2B3BA6F-DDB5-7284-DE70-B65905658A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2B3BA6F-DDB5-7284-DE70-B65905658A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2B3BA6F-DDB5-7284-DE70-B65905658A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2B3BA6F-DDB5-7284-DE70-B65905658A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

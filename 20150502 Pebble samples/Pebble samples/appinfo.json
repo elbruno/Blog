@@ -1,0 +1,18 @@
+{
+    "longName": "Dropping Balls Acelerometer",
+    "watchapp": {
+        "watchface": false
+    },
+    "companyName": "El Bruno",
+    "shortName": "DropingBallsAcel",
+    "capabilities": [
+        ""
+    ],
+    "uuid": "3b3c23e7-eb7a-4d53-98da-2873a109f297",
+    "resources": {
+        "media": []
+    },
+    "versionLabel": "1.0",
+    "appKeys": {},
+    "versionCode": 1
+}

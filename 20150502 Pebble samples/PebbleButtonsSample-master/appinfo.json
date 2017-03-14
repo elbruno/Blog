@@ -1,0 +1,30 @@
+{
+    "capabilities": [
+        "location"
+    ],
+    "uuid": "1c7b06f8-e3c4-41e8-8fae-925b94770108",
+    "resources": {
+        "media": [
+            {
+                "menuIcon": true,
+                "name": "MENU_ICON",
+                "type": "png",
+                "file": "images/Balon 24x24.png"
+            },
+            {
+                "name": "FOOTBALL",
+                "type": "png",
+                "file": "images/Football 48x48.png"
+            }
+        ]
+    },
+    "longName": "Button Soccer Sample",
+    "versionLabel": "1.5.50415.4",
+    "companyName": "bcapuano@gmail.com",
+    "versionCode": 1,
+    "appKeys": {},
+    "watchapp": {
+        "watchface": false
+    },
+    "shortName": "Button Soccer"
+}

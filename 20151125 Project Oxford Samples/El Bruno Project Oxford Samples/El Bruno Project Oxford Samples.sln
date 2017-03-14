@@ -1,0 +1,79 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Wpf Apps", "2 Wpf Apps", "{87F3D777-EB2F-46E5-BE8B-58BCE2A446CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElBruno.ProjectOxford.FaceApiEmotionSample", "ElBruno.ProjectOxford.FaceApiEmotionSample\ElBruno.ProjectOxford.FaceApiEmotionSample.csproj", "{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElBruno.ProjectOxford.FaceApiEmotionVisionSample", "ElBruno.ProjectOxford.FaceApiEmotionVisionSample\ElBruno.ProjectOxford.FaceApiEmotionVisionSample.csproj", "{B44AE12C-4DAD-4D05-8121-0B09FB433204}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Debug|ARM.Build.0 = Debug|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Debug|x64.Build.0 = Debug|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Debug|x86.Build.0 = Debug|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Release|ARM.ActiveCfg = Release|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Release|ARM.Build.0 = Release|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Release|x64.ActiveCfg = Release|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Release|x64.Build.0 = Release|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Release|x86.ActiveCfg = Release|Any CPU
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D}.Release|x86.Build.0 = Release|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Debug|ARM.Build.0 = Debug|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Debug|x64.Build.0 = Debug|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Debug|x86.Build.0 = Debug|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Release|ARM.Build.0 = Release|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Release|x64.ActiveCfg = Release|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Release|x64.Build.0 = Release|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Release|x86.ActiveCfg = Release|Any CPU
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7E5BFC34-1CD3-4B0E-8001-37AFA485C48D} = {87F3D777-EB2F-46E5-BE8B-58BCE2A446CD}
+		{B44AE12C-4DAD-4D05-8121-0B09FB433204} = {87F3D777-EB2F-46E5-BE8B-58BCE2A446CD}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://elbruno.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ElBruno.ProjectOxford.FaceApiEmotionSample\\ElBruno.ProjectOxford.FaceApiEmotionSample.csproj
+		SccProjectTopLevelParentUniqueName1 = El\u0020Bruno\u0020Project\u0020Oxford\u0020Samples.sln
+		SccProjectName1 = ElBruno.ProjectOxford.FaceApiEmotionSample
+		SccLocalPath1 = ElBruno.ProjectOxford.FaceApiEmotionSample
+		SccProjectUniqueName2 = ElBruno.ProjectOxford.FaceApiEmotionVisionSample\\ElBruno.ProjectOxford.FaceApiEmotionVisionSample.csproj
+		SccProjectTopLevelParentUniqueName2 = El\u0020Bruno\u0020Project\u0020Oxford\u0020Samples.sln
+		SccProjectName2 = ElBruno.ProjectOxford.FaceApiEmotionVisionSample
+		SccLocalPath2 = ElBruno.ProjectOxford.FaceApiEmotionVisionSample
+	EndGlobalSection
+	GlobalSection( ) = preSolution
+	EndGlobalSection
+EndGlobal

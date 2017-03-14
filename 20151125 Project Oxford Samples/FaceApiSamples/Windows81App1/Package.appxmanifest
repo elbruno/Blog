@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="961199d2-7db7-4176-9329-fb8b16c72a8a" Publisher="CN=Bruno" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>Windows81App1</DisplayName>
+    <PublisherDisplayName>Bruno</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Windows81App1.App">
+      <m2:VisualElements DisplayName="Windows81App1" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Windows81App1" ForegroundText="light" BackgroundColor="#464646" ToastCapable="true">
+        <m2:SplashScreen Image="Assets\SplashScreen.png" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <Capability Name="picturesLibrary" />
+    <Capability Name="removableStorage" />
+    <Capability Name="videosLibrary" />
+    <Capability Name="musicLibrary" />
+    <Capability Name="internetClientServer" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>

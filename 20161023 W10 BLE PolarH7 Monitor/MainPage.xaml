@@ -1,0 +1,252 @@
+﻿<Page   x:Class="ElBruno.PolarH7.MainPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:ElBruno.PolarH7"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:chart="using:Syncfusion.UI.Xaml.Charts"
+        Width="1366"
+        Height="768"
+        MaxHeight="768"
+        MaxWidth="1366"
+        mc:Ignorable="d">
+
+    <Grid Background="#3e4d8d">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="268" />
+            <RowDefinition Height="250" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="344" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Header -->
+        <Grid Grid.Row="0"
+              Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="134" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ButtonOltivaStressMonitor"
+                    Background="Transparent"
+                    Click="ButtonOltivaStressMonitor_OnClick">
+                <Image Source="Assets/logo.png"
+                       VerticalAlignment="Center"
+                       Height="40"
+                       HorizontalAlignment="Left" />
+            </Button>
+            <StackPanel Grid.Row="1"
+                        Orientation="Horizontal">
+                <Image Source="Assets/instructions.png"
+                       VerticalAlignment="Center"
+                       Height="26"
+                       HorizontalAlignment="Left" />
+                <Button x:Name="ButtonFakeHrUp"
+                        Foreground="White"
+                        Click="ButtonFakeHrUp_Click">Up</Button>
+                <Button x:Name="ButtonFakeHrDown"
+                        Foreground="White"
+                        Click="ButtonFakeHrDown_Click">Down</Button>
+            </StackPanel>
+            <Button x:Name="ButtonViewMore"
+                    Margin="00,0,30,0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Grid.Row="1"
+                    Background="Transparent"
+                    Click="ButtonViewMore_OnClick">
+                <Image Source="Assets/btn.png"
+                       Height="50" />
+            </Button>
+        </Grid>
+
+        <!-- Right Header -->
+        <Button x:Name="ButtonTopRight"
+                Foreground="White"
+                Grid.Row="0"
+                Grid.Column="2"
+                Background="Transparent"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch" Click="ButtonTopRight_OnClick" >
+            <Image Source="Assets/userimg.png" Stretch="Uniform" x:Name="ImageTopRight"/>
+        </Button>
+
+        <!-- Main Chart -->
+        <chart:SfChart x:Name="ChartStress"
+                       Grid.Row="1"
+                       Grid.RowSpan="3"
+                       Grid.Column="1"
+                       Height="385"
+                       Width="1004"
+                       AreaBorderThickness="0,0.5,0.5,0"
+                       VerticalAlignment="Top">
+
+            <chart:SfChart.PrimaryAxis>
+                <chart:CategoryAxis x:Name="primaryAxis"
+                                    PlotOffset="70"
+                                    LabelFormat="mm:ss"
+                                    Foreground="White"
+                                    ShowGridLines="False"
+                                    FontSize="12"
+                                    BorderBrush="White"
+                                    Visibility="Collapsed"
+                                    EdgeLabelsDrawingMode="Hide" />
+            </chart:SfChart.PrimaryAxis>
+
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis x:Name="secondaryAxis"
+                                     Minimum="1"
+                                     Maximum="11"
+                                     RangePadding="Round"
+                                     FontSize="12"
+                                     Foreground="White"
+                                     EdgeLabelsDrawingMode="Shift"
+                                     ShowGridLines="False"
+                                     SmallTickLineSize="15"
+                                     SmallTickLinesPosition="Inside"
+                                     TickLineSize="15" />
+            </chart:SfChart.SecondaryAxis>
+
+        </chart:SfChart>
+
+        <!-- Stress Level -->
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Margin="30">
+            <TextBlock x:Name="TextBlockStressTitle"
+                       HorizontalAlignment="Center"
+                       FontFamily="Lato Regular"
+                       FontSize="34"
+                       Foreground="White">STRESS LEVEL</TextBlock>
+            <TextBlock x:Name="TextBlockStressLevel"
+                       HorizontalAlignment="Center"
+                       FontFamily="Lato Regular"
+                       FontSize="28"
+                       Foreground="White">
+                <Run Text="{Binding StressValue}"></Run><Run> , </Run><Run Text="{Binding StressValueLevel}"></Run>
+            </TextBlock>
+
+            <TextBlock x:Name="TextBlockHeartRateTitle"
+                       Margin="0,30,0,0"
+                       HorizontalAlignment="Center"
+                       FontFamily="Lato Regular"
+                       FontSize="34"
+                       Foreground="White">HEART RATE</TextBlock>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <Image Source="Assets/Heart-ECG.png"
+                       Margin="0,0,10,0"
+                       Height="48" />
+                <TextBlock x:Name="TextBlockHeartRate"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontFamily="Lato Regular"
+                           FontSize="28"
+                           Foreground="White">
+                <Run Text="{Binding BpmValue}"></Run> <Run> BPM</Run>
+                </TextBlock>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Heart Rate -->
+        <chart:SfChart x:Name="ChartBpm"
+                       Grid.Row="2"
+                       Grid.Column="2"
+                       Grid.RowSpan="2"
+                       Margin="2"
+                       Height="200"
+                       AreaBorderThickness="0,0.5,0.5,0"
+                       VerticalAlignment="Top">
+
+            <chart:SfChart.PrimaryAxis>
+                <chart:CategoryAxis x:Name="primaryAxisBpm"
+                                    PlotOffset="70"
+                                    LabelFormat="ss"
+                                    Foreground="White"
+                                    ShowGridLines="False"
+                                    ShowAxisNextToOrigin="False"
+                                    ShowOrigin="False"
+                                    FontSize="6"
+                                    BorderBrush="White"
+                                    Visibility="Collapsed"
+                                    EdgeLabelsDrawingMode="Hide" />
+            </chart:SfChart.PrimaryAxis>
+
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis x:Name="secondaryAxisBpm"
+                                     RangePadding="Round"
+                                     FontSize="6"
+                                     Foreground="White"
+                                     EdgeLabelsDrawingMode="Shift"
+                                     ShowGridLines="False"
+                                     ShowOrigin="False"
+                                     ShowAxisNextToOrigin="False"
+                                     ShowTrackBallInfo="False"
+                                     SmallTickLineSize="15"
+                                     SmallTickLinesPosition="Inside"
+                                     Visibility="Collapsed"
+                                     TickLineSize="15" />
+            </chart:SfChart.SecondaryAxis>
+
+        </chart:SfChart>
+
+        <!-- Heart Rate -->
+        <Image Source="Assets/stresslevels.png"
+               Grid.Row="3"
+               Grid.Column="1"
+               Height="64"
+               HorizontalAlignment="Center" />
+
+        <!-- Status -->
+        <StackPanel x:Name="StackPanelStatus"
+                    Orientation="Horizontal"
+                    Grid.ColumnSpan="2"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Bottom">
+            <TextBlock x:Name="TextBlockStatus"
+                       Foreground="White"
+                       Text="{Binding StatusInformation}" />
+            <TextBlock x:Name="TextBlockStatusSeparator"
+                       Foreground="White"
+                       Text=" -||- " />
+            <TextBlock x:Name="TextBlockStatusStressProcessing"
+                       Foreground="White"
+                       Text="{Binding StressProcessingInformation}" />
+            <TextBlock x:Name="TextBlockStatusSeparator2"
+                       Foreground="White"
+                       Text=" -||- " />
+            <TextBlock x:Name="TextBlockStatusTime"
+                       Foreground="White"
+                       Text="{Binding TimeInformation}" />
+        </StackPanel>
+
+        <!-- Connected Status -->
+        <Image x:Name="ImageConnected"
+               Grid.Row="3"
+               Grid.Column="2"
+               Source="Assets/Link - 01.png"
+               Height="48"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Bottom"
+               Visibility="Collapsed" />
+        <Image x:Name="ImageDisconnected"
+               Grid.Row="3"
+               Grid.Column="2"
+               Source="Assets/Link - 02.png"
+               Height="48"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Bottom" />
+    </Grid>
+
+</Page>

@@ -1,0 +1,1 @@
+MainPackage=E:\src\eb\tests\BlueTooth\PolarH7\ElBruno.PolarH7\bin\x86\Debug\ElBruno.PolarH7_1.0.8.0_x86_Debug.appx

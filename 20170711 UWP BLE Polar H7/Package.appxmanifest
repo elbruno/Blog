@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="25B1149F-B27A-416D-97F1-7D5C710E2CB5" Publisher="CN=Bruno Capuano" Version="1.0.20.0" />
+  <mp:PhoneIdentity PhoneProductId="160dd7cc-b31a-46ce-bd6b-af0182efc7ac" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>El Bruno Monitor PolarH7</DisplayName>
+    <PublisherDisplayName>El Bruno</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="ElBruno.PolarH7.App">
+      <uap:VisualElements DisplayName="El Bruno Monitor PolarH7" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="El Bruno Monitor PolarH7" BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="El Bruno Monitor PolarH7">
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <uap:Capability Name="picturesLibrary" />
+    <uap:Capability Name="videosLibrary" />
+    <DeviceCapability Name="bluetooth" />
+    <DeviceCapability Name="bluetooth.genericAttributeProfile">
+      <Device Id="any">
+        <Function Type="name:heartRate" />
+        <Function Type="name:genericAccess" />
+      </Device>
+    </DeviceCapability>
+  </Capabilities>
+</Package>

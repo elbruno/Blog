@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Holo60", "Holo60.csproj", "{D5D86126-9D29-9DD3-05E3-91D72C8B1C22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Holo60.Editor", "Holo60.Editor.csproj", "{26CFE3B0-FAD6-B945-6256-FBFD90356581}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5D86126-9D29-9DD3-05E3-91D72C8B1C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5D86126-9D29-9DD3-05E3-91D72C8B1C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5D86126-9D29-9DD3-05E3-91D72C8B1C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5D86126-9D29-9DD3-05E3-91D72C8B1C22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26CFE3B0-FAD6-B945-6256-FBFD90356581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26CFE3B0-FAD6-B945-6256-FBFD90356581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26CFE3B0-FAD6-B945-6256-FBFD90356581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26CFE3B0-FAD6-B945-6256-FBFD90356581}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

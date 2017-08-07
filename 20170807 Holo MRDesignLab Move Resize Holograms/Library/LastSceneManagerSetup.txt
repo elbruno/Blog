@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Holo61Scene.unity
+  isLoaded: 1
+  isActive: 1

@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurfaceDialApp01", "SurfaceDialApp01\SurfaceDialApp01.csproj", "{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Debug|ARM.ActiveCfg = Debug|ARM
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Debug|ARM.Build.0 = Debug|ARM
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Debug|ARM.Deploy.0 = Debug|ARM
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Debug|x64.ActiveCfg = Debug|x64
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Debug|x64.Build.0 = Debug|x64
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Debug|x64.Deploy.0 = Debug|x64
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Debug|x86.ActiveCfg = Debug|x86
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Debug|x86.Build.0 = Debug|x86
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Debug|x86.Deploy.0 = Debug|x86
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Release|ARM.ActiveCfg = Release|ARM
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Release|ARM.Build.0 = Release|ARM
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Release|ARM.Deploy.0 = Release|ARM
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Release|x64.ActiveCfg = Release|x64
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Release|x64.Build.0 = Release|x64
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Release|x64.Deploy.0 = Release|x64
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Release|x86.ActiveCfg = Release|x86
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Release|x86.Build.0 = Release|x86
+		{A38CFFFE-7C70-4E70-A291-EA2FCB1BC2F4}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3FC2B53-D930-48D9-A8F3-3312C0D58114}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://elbruno.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SurfaceDialApp01\\SurfaceDialApp01.csproj
+		SccProjectName1 = SurfaceDialApp01
+		SccLocalPath1 = SurfaceDialApp01
+	EndGlobalSection
+EndGlobal

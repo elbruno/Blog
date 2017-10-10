@@ -4,9 +4,12 @@ using System.Runtime.CompilerServices;
 
 using Windows.Media.Core;
 using Windows.Media.Playback;
+using Windows.Storage.Streams;
 using Windows.System.Display;
 using Windows.UI.Core;
+using Windows.UI.Input;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
@@ -25,13 +28,43 @@ namespace SurfaceDialApp01.Views
         private DisplayRequest _displayRequest = new DisplayRequest();
         private bool _isRequestActive = false;
 
+        readonly RadialController _controller;
+
         public MediaPlayerPagePage()
         {
             InitializeComponent();
 
             mpe.PosterSource = new BitmapImage(new Uri(DefaultPoster));
             mpe.Source = MediaSource.CreateFromUri(new Uri(DefaultSource));
+
+            _controller = RadialController.CreateForCurrentView();
+            _controller.RotationResolutionInDegrees = 5;
+            _controller.UseAutomaticHapticFeedback = false;
+
+            var myItem = RadialControllerMenuItem.CreateFromFontGlyph("El Bruno - Playback", "\xE714", "Segoe MDL2 Assets");
+            _controller.Menu.Items.Add(myItem);
+            _controller.ButtonClicked += ControllerButtonClicked;
+            _controller.RotationChanged += ControllerRotationChanged;
         }
+
+
+        private void ControllerRotationChanged(RadialController sender, RadialControllerRotationChangedEventArgs args)
+        {
+            mpe.MediaPlayer.Position = mpe.MediaPlayer.Position + TimeSpan.FromSeconds(args.RotationDeltaInDegrees);
+        }
+
+        private void ControllerButtonClicked(RadialController sender, RadialControllerButtonClickedEventArgs args)
+        {
+            if (mpe.MediaPlayer.CurrentState == MediaPlayerState.Playing)
+            {
+                mpe.MediaPlayer.Pause();
+            }
+            else
+            {
+                mpe.MediaPlayer.Play();
+            }
+        }
+
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {

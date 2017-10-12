@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
@@ -9,6 +10,7 @@ using SurfaceDialApp01.Services;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Storage.Streams;
+using Windows.UI.Input;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Maps;
 using Windows.UI.Xaml.Navigation;
@@ -45,12 +47,41 @@ namespace SurfaceDialApp01.Views
             set { Set(ref _center, value); }
         }
 
+        enum ControllerMode { zoom, rotate };
+        ControllerMode _controllerMode;
+        readonly RadialController _controller;
+
         public MapPagePage()
         {
             locationService = new LocationService();
             Center = new Geopoint(defaultPosition);
             ZoomLevel = DefaultZoomLevel;
             InitializeComponent();
+
+            _controller = RadialController.CreateForCurrentView();
+            _controller.RotationResolutionInDegrees = 0.2;
+            _controller.UseAutomaticHapticFeedback = false;
+
+            var myItem = RadialControllerMenuItem.CreateFromFontGlyph("El Bruno - Maps", "\xE128", "Segoe MDL2 Assets");
+            _controller.Menu.Items.Add(myItem);
+            _controller.ButtonClicked += ControllerButtonClicked;
+            _controller.RotationChanged += ControllerRotationChangedAsync;
+        }
+        private async void ControllerRotationChangedAsync(RadialController sender, RadialControllerRotationChangedEventArgs args)
+        {
+            Debug.WriteLine($"{args.RotationDeltaInDegrees}");
+            if (_controllerMode == ControllerMode.zoom)
+                mapControl.ZoomLevel = mapControl.ZoomLevel + args.RotationDeltaInDegrees;
+            else
+                await mapControl.TryRotateAsync(args.RotationDeltaInDegrees);
+        }
+
+        private void ControllerButtonClicked(RadialController sender, RadialControllerButtonClickedEventArgs args)
+        {
+            if (_controllerMode == ControllerMode.rotate)
+                _controllerMode = ControllerMode.zoom;
+            else
+                _controllerMode = ControllerMode.rotate;
         }
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)

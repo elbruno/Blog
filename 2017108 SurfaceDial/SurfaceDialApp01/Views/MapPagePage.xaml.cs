@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
@@ -17,15 +18,15 @@ using Windows.UI.Xaml.Navigation;
 
 namespace SurfaceDialApp01.Views
 {
-    public sealed partial class MapPagePage : Page, INotifyPropertyChanged
+    public sealed partial class MapPagePage : INotifyPropertyChanged
     {
         // TODO WTS: Set your preferred default zoom level
         private const double DefaultZoomLevel = 17;
 
-        private readonly LocationService locationService;
+        private readonly LocationService _locationService;
 
         // TODO WTS: Set your preferred default location if a geolock can't be found.
-        private readonly BasicGeoposition defaultPosition = new BasicGeoposition()
+        private readonly BasicGeoposition _defaultPosition = new BasicGeoposition()
         {
             Latitude = 47.609425,
             Longitude = -122.3417
@@ -35,53 +36,85 @@ namespace SurfaceDialApp01.Views
 
         public double ZoomLevel
         {
-            get { return _zoomLevel; }
-            set { Set(ref _zoomLevel, value); }
+            get => _zoomLevel;
+            set => Set(ref _zoomLevel, value);
         }
 
         private Geopoint _center;
 
         public Geopoint Center
         {
-            get { return _center; }
-            set { Set(ref _center, value); }
+            get => _center;
+            set => Set(ref _center, value);
         }
 
-        enum ControllerMode { zoom, rotate };
+        enum ControllerMode { Zoom, Rotate, Disable };
         ControllerMode _controllerMode;
-        readonly RadialController _controller;
 
         public MapPagePage()
         {
-            locationService = new LocationService();
-            Center = new Geopoint(defaultPosition);
+            _locationService = new LocationService();
+            Center = new Geopoint(_defaultPosition);
             ZoomLevel = DefaultZoomLevel;
             InitializeComponent();
 
-            _controller = RadialController.CreateForCurrentView();
-            _controller.RotationResolutionInDegrees = 0.2;
-            _controller.UseAutomaticHapticFeedback = false;
+            var controller = RadialController.CreateForCurrentView();
+            controller.RotationResolutionInDegrees = 0.2;
+            controller.UseAutomaticHapticFeedback = false;
 
-            var myItem = RadialControllerMenuItem.CreateFromFontGlyph("El Bruno - Maps", "\xE128", "Segoe MDL2 Assets");
-            _controller.Menu.Items.Add(myItem);
-            _controller.ButtonClicked += ControllerButtonClicked;
-            _controller.RotationChanged += ControllerRotationChangedAsync;
+            var mapZoomItem = RadialControllerMenuItem.CreateFromFontGlyph("El Bruno - Maps Zoom", "\xE128", "Segoe MDL2 Assets");
+            var mapRotationItem = RadialControllerMenuItem.CreateFromFontGlyph("El Bruno - Map Rotation", "\xE128", "Segoe MDL2 Assets");
+            var disableDialItem = RadialControllerMenuItem.CreateFromFontGlyph("El Bruno - Disable Dial", "\xE128", "Segoe MDL2 Assets");
+            controller.Menu.Items.Add(mapZoomItem);
+            controller.Menu.Items.Add(mapRotationItem);
+            controller.Menu.Items.Add(disableDialItem);
+
+            var surfaceDialConfiguration = RadialControllerConfiguration.GetForCurrentView();
+            surfaceDialConfiguration.SetDefaultMenuItems(new List<RadialControllerSystemMenuItemKind>{});
+
+            // add 2 default system buttons
+            //surfaceDialConfiguration.SetDefaultMenuItems(new[] {
+            //    RadialControllerSystemMenuItemKind.Volume,
+            //    RadialControllerSystemMenuItemKind.NextPreviousTrack
+            //});
+
+            mapZoomItem.Invoked += MapZoomItem_Invoked;
+            mapRotationItem.Invoked += MapRotationItem_Invoked;
+            disableDialItem.Invoked += DisableDialItem_Invoked;  
+
+            controller.RotationChanged += ControllerRotationChangedAsync;
         }
+
+        private void DisableDialItem_Invoked(RadialControllerMenuItem sender, object args)
+        {
+            _controllerMode = ControllerMode.Disable;
+        }
+
+        private void MapRotationItem_Invoked(RadialControllerMenuItem sender, object args)
+        {
+            _controllerMode = ControllerMode.Rotate;
+        }
+
+        private void MapZoomItem_Invoked(RadialControllerMenuItem sender, object args)
+        {
+            _controllerMode = ControllerMode.Zoom;
+        }
+
         private async void ControllerRotationChangedAsync(RadialController sender, RadialControllerRotationChangedEventArgs args)
         {
             Debug.WriteLine($"{args.RotationDeltaInDegrees}");
-            if (_controllerMode == ControllerMode.zoom)
-                mapControl.ZoomLevel = mapControl.ZoomLevel + args.RotationDeltaInDegrees;
-            else
-                await mapControl.TryRotateAsync(args.RotationDeltaInDegrees);
-        }
-
-        private void ControllerButtonClicked(RadialController sender, RadialControllerButtonClickedEventArgs args)
-        {
-            if (_controllerMode == ControllerMode.rotate)
-                _controllerMode = ControllerMode.zoom;
-            else
-                _controllerMode = ControllerMode.rotate;
+            switch (_controllerMode)
+            {
+                case ControllerMode.Zoom:
+                    mapControl.ZoomLevel = mapControl.ZoomLevel + args.RotationDeltaInDegrees;
+                    break;
+                case ControllerMode.Rotate:
+                    await mapControl.TryRotateAsync(args.RotationDeltaInDegrees);
+                    break;
+                default:
+                    Debug.WriteLine($"No action!");
+                    break;
+            }
         }
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
@@ -96,24 +129,24 @@ namespace SurfaceDialApp01.Views
 
         public async Task InitializeAsync()
         {
-            if (locationService != null)
+            if (_locationService != null)
             {
-                locationService.PositionChanged += LocationService_PositionChanged;
+                _locationService.PositionChanged += LocationService_PositionChanged;
 
-                var initializationSuccessful = await locationService.InitializeAsync();
+                var initializationSuccessful = await _locationService.InitializeAsync();
 
                 if (initializationSuccessful)
                 {
-                    await locationService.StartListeningAsync();
+                    await _locationService.StartListeningAsync();
                 }
 
-                if (initializationSuccessful && locationService.CurrentPosition != null)
+                if (initializationSuccessful && _locationService.CurrentPosition != null)
                 {
-                    Center = locationService.CurrentPosition.Coordinate.Point;
+                    Center = _locationService.CurrentPosition.Coordinate.Point;
                 }
                 else
                 {
-                    Center = new Geopoint(defaultPosition);
+                    Center = new Geopoint(_defaultPosition);
                 }
             }
 
@@ -128,10 +161,10 @@ namespace SurfaceDialApp01.Views
 
         public void Cleanup()
         {
-            if (locationService != null)
+            if (_locationService != null)
             {
-                locationService.PositionChanged -= LocationService_PositionChanged;
-                locationService.StopListening();
+                _locationService.PositionChanged -= LocationService_PositionChanged;
+                _locationService.StopListening();
             }
         }
 

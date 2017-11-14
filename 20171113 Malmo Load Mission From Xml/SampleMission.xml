@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Mission xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchemainstance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com Mission.xsd">
+  <About>
+    <Summary>El Bruno Sample Mission from Xml definition</Summary>
+  </About>
+  <ServerSection>
+    <ServerHandlers>
+      <FlatWorldGenerator generatorString="3;1*minecraft:lava,1*minecraft:bedrock,7*minecraft:dirt,1*minecraft:ice,1*minecraft:grass;2;mineshaft(chance=0.01),lake"/>
+      <ServerQuitFromTimeUp description="" timeLimitMs="10000"/>
+      <ServerQuitWhenAnyAgentFinishes description=""/>
+    </ServerHandlers>
+  </ServerSection>
+  <AgentSection mode="Survival">
+    <Name>Valentino</Name>
+    <AgentStart/>
+    <AgentHandlers>
+      <ObservationFromFullStats/>
+      <VideoProducer want_depth="true">
+        <Width>640</Width>
+        <Height>480</Height>
+      </VideoProducer>
+      <ObservationFromGrid>
+        <Grid name="floor3x3">
+          <min x="-1" y="-1" z="-1"/>
+          <max x="1" y="-1" z="1"/>
+        </Grid>
+      </ObservationFromGrid>
+      <ObservationFromRay/>
+      <ObservationFromNearbyEntities>
+        <Range name="NearbyEntities"
+          xrange="10"
+          yrange="10"
+          zrange="1"
+          update_frequency="1"/>
+      </ObservationFromNearbyEntities>
+      <ContinuousMovementCommands turnSpeedDegs="180"/>
+    </AgentHandlers>
+  </AgentSection>
+</Mission>

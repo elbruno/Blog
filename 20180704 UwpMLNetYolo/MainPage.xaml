@@ -9,7 +9,15 @@
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <my:CameraPreview x:Name="CameraPreview" />
-        <Canvas Name="YoloCanvas" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <my:CameraPreview x:Name="CameraPreview"
+                          Grid.Row="0" />
+        <Canvas Name="YoloCanvas"
+                Grid.Row="0" />
+        <TextBlock x:Name="TextBlockInformation"
+                   Grid.Row="1" />
     </Grid>
 </Page>

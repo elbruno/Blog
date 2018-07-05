@@ -21,18 +21,30 @@ namespace UwpAppYolo01
         private readonly SolidColorBrush _lineBrushGreen = new SolidColorBrush(Windows.UI.Colors.Green);
         private readonly SolidColorBrush _fillBrush = new SolidColorBrush(Windows.UI.Colors.Transparent);
         private readonly double _lineThickness = 2.0;
+        private uint _yoloCanvasActualWidth;
+        private uint _yoloCanvasActualHeight;
+        private Stopwatch _stopwatch;
 
         public MainPage()
         {
             InitializeComponent();
         }
 
+
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             LoadYoloOnnxModel();
 
+            Window.Current.SizeChanged += Current_SizeChanged;
+
             await CameraPreview.StartAsync();
             CameraPreview.CameraHelper.FrameArrived += CameraHelper_FrameArrived;
+        }
+
+        private void Current_SizeChanged(object sender, WindowSizeChangedEventArgs e)
+        {
+            _yoloCanvasActualWidth = (uint)YoloCanvas.ActualWidth;
+            _yoloCanvasActualHeight = (uint)YoloCanvas.ActualHeight;
         }
 
         private async void LoadYoloOnnxModel()
@@ -46,11 +58,14 @@ namespace UwpAppYolo01
             if (e?.VideoFrame?.SoftwareBitmap == null) return;
 
             var input = new TinyYoloV2ModelInput { Image = e.VideoFrame };
+            _stopwatch = Stopwatch.StartNew();
             var output = await _model.EvaluateAsync(input);
+            _stopwatch.Stop();
             _boxes = _parser.ParseOutputs(output.Grid.ToArray());
 
             await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
             {
+                TextBlockInformation.Text = $"{1000f / _stopwatch.ElapsedMilliseconds,4:f1} fps on Width {_yoloCanvasActualWidth} x Height {_yoloCanvasActualHeight}";
                 DrawOverlays(e.VideoFrame);
             });
         }
@@ -67,11 +82,17 @@ namespace UwpAppYolo01
 
         private void DrawYoloBoundingBox(YoloBoundingBox box, Canvas overlayCanvas)
         {
-            // Scale is set to stretched 416x416 - Clip bounding boxes to image area
+            // process output boxes
             var x = (uint)Math.Max(box.X, 0);
             var y = (uint)Math.Max(box.Y, 0);
             var w = (uint)Math.Min(overlayCanvas.ActualWidth - x, box.Width);
             var h = (uint)Math.Min(overlayCanvas.ActualHeight - y, box.Height);
+
+            // fit to current canvas and webcam size
+            x = _yoloCanvasActualWidth * x / 416;
+            y = _yoloCanvasActualHeight * y / 416;
+            w = _yoloCanvasActualWidth * w / 416;
+            h = _yoloCanvasActualHeight * h / 416;
 
             var rectStroke = box.Label == "person" ? _lineBrushGreen : _lineBrushYellow;
 

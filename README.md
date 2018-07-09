@@ -1,4 +1,4 @@
-![El Bruno on Hololens](holobruno 01.jpg?raw=true "El Bruno on Hololens")
+![El Bruno on Hololens](/holobruno 01.jpg?raw=true "El Bruno on Hololens")
 
 # El Bruno Blog
 This repo is my main repository since 2015 for some code samples I share in my Blog

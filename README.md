@@ -1,4 +1,4 @@
-![El Bruno on Hololens](holobruno 01.jpg?raw=true "El Bruno on Hololens")
+![El Bruno on AI](https://github.com/elbruno/Blog/blob/master/el%20bruno%20session%20mvp%20logo.png)
 
 # El Bruno Blog
 This repo is my main repository since 2015 for some code samples I share in my Blog

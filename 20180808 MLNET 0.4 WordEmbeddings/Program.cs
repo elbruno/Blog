@@ -31,7 +31,7 @@ namespace MLNetConsole09
             TrainModel();
             TrainModelWordEmbeddings();
 
-            _modelWordEmbeddingsFastTextWikipedia300D = TrainModelWordEmbeddings(WordEmbeddingsTransformPretrainedModelKind.FastTextWikipedia300D);
+            //_modelWordEmbeddingsFastTextWikipedia300D = TrainModelWordEmbeddings(WordEmbeddingsTransformPretrainedModelKind.FastTextWikipedia300D);
             _modelWordEmbeddingsGloVe50D = TrainModelWordEmbeddings(WordEmbeddingsTransformPretrainedModelKind.GloVe50D);
             _modelWordEmbeddingsGloVe300D = TrainModelWordEmbeddings(WordEmbeddingsTransformPretrainedModelKind.GloVe300D);
             _modelWordEmbeddingsGloVeTwitter50D = TrainModelWordEmbeddings(WordEmbeddingsTransformPretrainedModelKind.GloVeTwitter50D);
@@ -40,7 +40,7 @@ namespace MLNetConsole09
 
             Evaluate(_model, "normal");
             Evaluate(_modelWordEmbeddings, "using WordEmbeddings");
-            Evaluate(_modelWordEmbeddingsFastTextWikipedia300D, "using WordEmbeddings FastTextWikipedia300D");
+            //Evaluate(_modelWordEmbeddingsFastTextWikipedia300D, "using WordEmbeddings FastTextWikipedia300D");
             Evaluate(_modelWordEmbeddingsGloVe50D, "using WordEmbeddings GloVe50D");
             Evaluate(_modelWordEmbeddingsGloVe300D, "using WordEmbeddings GloVe300D");
             Evaluate(_modelWordEmbeddingsGloVeTwitter50D, "using WordEmbeddings GloVeTwitter50D");

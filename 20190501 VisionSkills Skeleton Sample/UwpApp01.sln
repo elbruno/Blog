@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UwpApp01", "UwpApp01\UwpApp01.csproj", "{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Debug|ARM.ActiveCfg = Debug|ARM
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Debug|ARM.Build.0 = Debug|ARM
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Debug|ARM.Deploy.0 = Debug|ARM
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Debug|ARM64.Build.0 = Debug|ARM64
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Debug|x64.ActiveCfg = Debug|x64
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Debug|x64.Build.0 = Debug|x64
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Debug|x64.Deploy.0 = Debug|x64
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Debug|x86.ActiveCfg = Debug|x86
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Debug|x86.Build.0 = Debug|x86
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Debug|x86.Deploy.0 = Debug|x86
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Release|ARM.ActiveCfg = Release|ARM
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Release|ARM.Build.0 = Release|ARM
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Release|ARM.Deploy.0 = Release|ARM
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Release|ARM64.ActiveCfg = Release|ARM64
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Release|ARM64.Build.0 = Release|ARM64
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Release|ARM64.Deploy.0 = Release|ARM64
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Release|x64.ActiveCfg = Release|x64
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Release|x64.Build.0 = Release|x64
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Release|x64.Deploy.0 = Release|x64
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Release|x86.ActiveCfg = Release|x86
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Release|x86.Build.0 = Release|x86
+		{A937CD04-16A3-4047-BDB3-2BDDAC0E17B9}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFE1260D-0B30-496B-B496-336CA07290BC}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://elbruno.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = UwpApp01\\UwpApp01.csproj
+		SccProjectName1 = UwpApp01
+		SccLocalPath1 = UwpApp01
+	EndGlobalSection
+EndGlobal

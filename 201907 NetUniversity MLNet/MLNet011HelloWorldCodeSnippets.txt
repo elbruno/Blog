@@ -1,0 +1,94 @@
+[ MLNet01 Pipeline usings ]
+
+using System;
+using System.IO;
+using Microsoft.ML;
+using Microsoft.ML.Data;
+using MLNetDemo011.Shared;
+
+[ MLNet 03 static vars ]
+
+static readonly string TrainDataPath = Path.Combine(Environment.CurrentDirectory, "Data", "AgeRangeData01.csv");
+
+[MLNet04 Load Data ]
+var ml = new MLContext(seed: 1, conc: 1);
+// Read the data into a data view.
+var data = ml.Data.LoadFromTextFile<AgeRange>(TrainDataPath, hasHeader: true, separatorChar: ',');
+
+
+[ MLNet 05 Train ]
+// Train
+var pipeline = ml.Transforms.Conversion.MapValueToKey("Label")
+	.Append(ml.Transforms.Concatenate("Features", "Age"))
+    .AppendCacheCheckpoint(ml)
+    .Append(ml.MulticlassClassification.Trainers.SdcaMaximumEntropy("Label", "Features"))
+    .Append(ml.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
+
+var model = pipeline.Fit(data);
+Console.WriteLine("Model trained");
+
+[ MLNet 06 Predict ]
+
+// Predict
+var engine = model.CreatePredictionEngine<AgeRange, AgeRangePrediction>(model);
+PredictSimple("Jeff", 2, "M", engine);
+PredictSimple("Shelley", 9, "F", engine);
+PredictSimple("Jackie", 3, "F", engine);
+PredictSimple("Jim", 5, "M", engine);
+
+[ MLNet 07 Predict Function ]
+
+private static void PredictSimple(string name, float age, string gender, PredictionEngine<AgeRange, AgeRangePrediction> predictionFunction)
+{
+    var example = new AgeRange()
+    {
+        Age = age,
+        Name = name,
+        Gender = gender
+    };
+    var prediction = predictionFunction.Predict(example);
+    Console.WriteLine($"Name: {example.Name}\t Age: {example.Age:00}\t Gender: {example.Gender}\t >> Predicted Label: {prediction.PredictedLabel}");
+}
+
+[ MLNet 08 Train AGE GENDER ]
+
+// Train
+var pipeline = ml.Transforms.Conversion.MapValueToKey("Label")
+    .Append(ml.Transforms.Text.FeaturizeText("GenderFeat", "Gender"))
+    .Append(ml.Transforms.Concatenate("Features", "Age", "GenderFeat"))
+    .AppendCacheCheckpoint(ml)
+    .Append(ml.MulticlassClassification.Trainers.StochasticDualCoordinateAscent(labelColumn: "Label", featureColumn: "Features"))
+    .Append(ml.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
+
+[ MLNet 09 Save ]
+// Save Model
+mlContext.Model.Save(trainedModel, data.Schema, "sentimentAnalysis.zip");
+
+[ MLNet 10 Load ]
+// Load Model
+var trainedModel = mlContext.Model.Load("sentimentAnalysis.zip", out var modelInputSchema);
+
+[ 11 Split Data ]
+// Split data 80 / 20
+var trainTestSplit = mlContext.Data.TrainTestSplit(data, testFraction: 0.2);
+var trainingData = trainTestSplit.TrainSet;
+var testData = trainTestSplit.TestSet;
+
+[ 12 Train using training data ]
+// train using training data
+var trainedModel = trainingPipeline.Fit(trainingData);
+
+[ 13 Eval Model ]
+// STEP 5: Evaluate the model and show accuracy stats
+var predictions = trainedModel.Transform(testData);
+var metrics = mlContext.BinaryClassification.Evaluate(data: predictions, labelColumnName: "Label", scoreColumnName: "Score");
+
+[ 14 Console Helper to display data ]
+ConsoleHelper.PrintBinaryClassificationMetrics(trainer.ToString(), metrics);
+
+[ 15 AutoML ]
+// STEP 1: Common data loading configuration
+IDataView trainingDataView = mlContext.Data.LoadFromTextFile<TaxiTrip>(TrainDataPath, hasHeader: true, separatorChar: ',');
+IDataView testDataView = mlContext.Data.LoadFromTextFile<TaxiTrip>(TestDataPath, hasHeader: true, separatorChar: ',');
+
+[ 16 AutoML ]

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Shared\wikiDetoxAnnotated40kRows.tsv" Link="wikiDetoxAnnotated40kRows.tsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shared\wikiDetoxAnnotated40kRowsVacuum.tsv" Link="wikiDetoxAnnotated40kRowsVacuum.tsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.1.0" />
+  </ItemGroup>
+
+</Project>

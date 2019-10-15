@@ -26,7 +26,7 @@ foreach ($dnSDK in $dnSDKs) {
         $dnAppName = "Microsoft .NET Core SDK - " + $dnSDKVersion
                 
         $app = Get-WmiObject -Class Win32_Product | Where-Object { 
-            $_.Name -match $dnSDKVersion
+            $_.Name -match $dnAppName
         }        
         Write-Host $app.Name 
         Write-Host $app.IdentifyingNumber

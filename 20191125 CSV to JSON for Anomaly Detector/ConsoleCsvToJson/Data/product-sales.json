@@ -1,0 +1,149 @@
+{
+  "granularity": "daily",
+  "series": [
+    {
+      "timestamp": "2019-01-01",
+      "value": 271
+    },
+    {
+      "timestamp": "2019-01-02",
+      "value": 150.9
+    },
+    {
+      "timestamp": "2019-01-03",
+      "value": 188.1
+    },
+    {
+      "timestamp": "2019-01-04",
+      "value": 124.3
+    },
+    {
+      "timestamp": "2019-01-05",
+      "value": 185.3
+    },
+    {
+      "timestamp": "2019-01-06",
+      "value": 173.5
+    },
+    {
+      "timestamp": "2019-01-07",
+      "value": 236.8
+    },
+    {
+      "timestamp": "2019-01-08",
+      "value": 229.5
+    },
+    {
+      "timestamp": "2019-01-09",
+      "value": 197.8
+    },
+    {
+      "timestamp": "2019-01-10",
+      "value": 127.9
+    },
+    {
+      "timestamp": "2019-01-11",
+      "value": 341.5
+    },
+    {
+      "timestamp": "2019-01-12",
+      "value": 190.9
+    },
+    {
+      "timestamp": "2019-02-01",
+      "value": 199.3
+    },
+    {
+      "timestamp": "2019-02-02",
+      "value": 154.5
+    },
+    {
+      "timestamp": "2019-02-03",
+      "value": 215.1
+    },
+    {
+      "timestamp": "2019-02-04",
+      "value": 278.3
+    },
+    {
+      "timestamp": "2019-02-05",
+      "value": 196.4
+    },
+    {
+      "timestamp": "2019-02-06",
+      "value": 292
+    },
+    {
+      "timestamp": "2019-02-07",
+      "value": 231
+    },
+    {
+      "timestamp": "2019-02-08",
+      "value": 308.6
+    },
+    {
+      "timestamp": "2019-02-09",
+      "value": 294.9
+    },
+    {
+      "timestamp": "2019-02-10",
+      "value": 426.6
+    },
+    {
+      "timestamp": "2019-02-11",
+      "value": 269.5
+    },
+    {
+      "timestamp": "2019-02-12",
+      "value": 347.3
+    },
+    {
+      "timestamp": "2019-03-01",
+      "value": 344.7
+    },
+    {
+      "timestamp": "2019-03-02",
+      "value": 445.4
+    },
+    {
+      "timestamp": "2019-03-03",
+      "value": 320.9
+    },
+    {
+      "timestamp": "2019-03-04",
+      "value": 444.3
+    },
+    {
+      "timestamp": "2019-03-05",
+      "value": 406.3
+    },
+    {
+      "timestamp": "2019-03-06",
+      "value": 442.4
+    },
+    {
+      "timestamp": "2019-03-07",
+      "value": 580.5
+    },
+    {
+      "timestamp": "2019-03-08",
+      "value": 412.6
+    },
+    {
+      "timestamp": "2019-03-09",
+      "value": 687
+    },
+    {
+      "timestamp": "2019-03-10",
+      "value": 480.3
+    },
+    {
+      "timestamp": "2019-03-11",
+      "value": 586.3
+    },
+    {
+      "timestamp": "2019-03-12",
+      "value": 651.9
+    }
+  ]
+}

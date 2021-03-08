@@ -1,0 +1,4 @@
+azure-iot-device~=2.0.0
+RPi.GPIO
+grove.py
+seeed-python-dht
